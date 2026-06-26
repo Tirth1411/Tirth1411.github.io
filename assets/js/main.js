@@ -32,12 +32,18 @@ async function init() {
     }
 }
 
-const ASSET_VERSION = '2';
+const ASSET_VERSION = '6';
 const $ = (id) => document.getElementById(id);
 const NAV_OFFSET = 64;
 function scrollToEl(el, smooth) {
     const y = el.getBoundingClientRect().top + window.scrollY - NAV_OFFSET;
     window.scrollTo({ top: y, behavior: smooth ? 'smooth' : 'auto' });
+}
+// Logo badge: renders the org logo, falling back to a clean initials monogram if it fails to load
+function orgLogo(logo, initials, name) {
+    const ini = `<span class="org-initials"${logo ? ' style="display:none"' : ''}>${initials || ''}</span>`;
+    const img = logo ? `<img src="${logo}" alt="${name} logo" loading="lazy" onerror="this.style.display='none';var s=this.parentElement&&this.parentElement.querySelector('.org-initials');if(s)s.style.display='grid';">` : '';
+    return `<span class="org-logo">${img}${ini}</span>`;
 }
 async function getJSON(path) {
     const res = await fetch(`${path}?v=${ASSET_VERSION}`);
@@ -115,6 +121,7 @@ async function loadExperience() {
         $('experience-list').innerHTML = (d.experiences || []).map(x => `
             <article class="exp-item reveal">
                 <div class="exp-meta">
+                    ${orgLogo(x.logo, x.initials, x.company)}
                     <p class="exp-period">${x.period}${x.location ? `<span class="exp-loc">${x.location}</span>` : ''}</p>
                 </div>
                 <div class="exp-body">
@@ -178,6 +185,7 @@ async function loadEducation() {
         if (d.sectionTitle) $('education-title').textContent = d.sectionTitle;
         $('education-list').innerHTML = (d.education || []).map(e => `
             <article class="edu-item reveal">
+                ${orgLogo(e.logo, e.initials, e.school)}
                 <div class="edu-main">
                     <h3 class="edu-degree">${e.degree}</h3>
                     <p class="edu-school">${e.school}</p>

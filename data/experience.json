@@ -11,7 +11,9 @@
         "Prototyped an LLM-based assistant (LangChain) to answer staff queries from internal documentation, reducing manual lookups.",
         "Performed data analysis and validation with Pandas/NumPy, improving reporting accuracy and reducing manual effort.",
         "Collaborated with cross-functional teams using Git for version control and process automation."
-      ]
+      ],
+      "logo": "assets/images/logos/mtsu.png",
+      "initials": "MT"
     },
     {
       "role": "AI/ML Intern",
@@ -24,7 +26,9 @@
         "Developed end-to-end ML pipelines: preprocessing, EDA, feature engineering, training and evaluation.",
         "Owned model deployment and monitoring using AWS, Docker, MLflow and REST APIs as part of MLOps workflows.",
         "Collaborated in KT sessions on enterprise GenAI architectures and scalable model management."
-      ]
+      ],
+      "logo": null,
+      "initials": "NF"
     },
     {
       "role": "Data Science Intern",
@@ -35,7 +39,9 @@
         "Built ML pipelines (Pandas, NumPy, Scikit-learn) for predictive analytics with feature engineering and EDA.",
         "Trained supervised models (Random Forest, Neural Networks) achieving up to 90% accuracy.",
         "Created visual analytics reports (Matplotlib, Seaborn) to communicate insights for business decisions."
-      ]
+      ],
+      "logo": "assets/images/logos/slashmark.png",
+      "initials": "SM"
     }
   ]
 }
