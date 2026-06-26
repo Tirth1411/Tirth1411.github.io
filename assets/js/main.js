@@ -32,7 +32,7 @@ async function init() {
     }
 }
 
-const ASSET_VERSION = '6';
+const ASSET_VERSION = '7';
 const $ = (id) => document.getElementById(id);
 const NAV_OFFSET = 64;
 function scrollToEl(el, smooth) {

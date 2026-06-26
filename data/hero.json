@@ -26,7 +26,7 @@
   "cta": [
     {
       "text": "Email me",
-      "href": "mailto:tirthlaheri@gmail.com",
+      "href": "mailto:tirthlaheri.194@gmail.com",
       "type": "primary",
       "icon": "fas fa-envelope"
     },
@@ -65,7 +65,7 @@
     },
     {
       "platform": "Email",
-      "url": "mailto:tirthlaheri@gmail.com",
+      "url": "mailto:tirthlaheri.194@gmail.com",
       "icon": "fas fa-envelope"
     }
   ],
