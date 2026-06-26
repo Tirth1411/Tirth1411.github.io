@@ -15,7 +15,8 @@
         "FastAPI",
         "LLM"
       ],
-      "links": {}
+      "links": {},
+      "image": "assets/images/projects/legal-doc.png"
     },
     {
       "title": "GravWaveFormer — GW Detection Ensemble",
@@ -29,7 +30,8 @@
         "GradCAM",
         "Streamlit"
       ],
-      "links": {}
+      "links": {},
+      "image": "assets/images/projects/gravwaveformer.png"
     },
     {
       "title": "Cross-Camera Player Mapping",
@@ -43,7 +45,8 @@
         "Re-ID",
         "Computer Vision"
       ],
-      "links": {}
+      "links": {},
+      "image": "assets/images/projects/cross-camera.png"
     },
     {
       "title": "Plant Disease Detection",
@@ -56,7 +59,8 @@
         "CNN",
         "Transfer Learning"
       ],
-      "links": {}
+      "links": {},
+      "image": "assets/images/projects/plant-disease.png"
     },
     {
       "title": "Diabetic Retinopathy Screening",
@@ -71,7 +75,8 @@
       ],
       "links": {
         "github": "https://github.com/Tirth1411/Diabetic-Retinopathy-Screening"
-      }
+      },
+      "image": "assets/images/projects/diabetic-retinopathy.png"
     },
     {
       "title": "Emotion Detection",
@@ -83,7 +88,8 @@
         "CNN",
         "Facial Recognition"
       ],
-      "links": {}
+      "links": {},
+      "image": "assets/images/projects/emotion-detection.png"
     },
     {
       "title": "Speech-To-Speech Multilingual Translation",
@@ -96,7 +102,8 @@
         "Voice Cloning",
         "NLP"
       ],
-      "links": {}
+      "links": {},
+      "image": "assets/images/projects/speech-translation.png"
     }
   ]
 }

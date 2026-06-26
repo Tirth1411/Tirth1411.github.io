@@ -24,11 +24,23 @@ async function init() {
     initScrollEffects();
     initBackToTop();
     initReveal();
+
+    // Content renders async, so a #hash deep-link must be re-applied after layout settles
+    if (location.hash) {
+        const target = document.querySelector(location.hash);
+        if (target) requestAnimationFrame(() => scrollToEl(target, false));
+    }
 }
 
+const ASSET_VERSION = '2';
 const $ = (id) => document.getElementById(id);
+const NAV_OFFSET = 64;
+function scrollToEl(el, smooth) {
+    const y = el.getBoundingClientRect().top + window.scrollY - NAV_OFFSET;
+    window.scrollTo({ top: y, behavior: smooth ? 'smooth' : 'auto' });
+}
 async function getJSON(path) {
-    const res = await fetch(path);
+    const res = await fetch(`${path}?v=${ASSET_VERSION}`);
     if (!res.ok) throw new Error(`${path} → ${res.status}`);
     return res.json();
 }
@@ -128,14 +140,19 @@ async function loadProjects() {
             ].filter(Boolean).join('');
             return `
             <article class="project-card reveal">
-                <div class="project-top">
-                    <i class="project-icon ${p.icon || 'fas fa-cube'}"></i>
+                ${p.image ? `
+                <div class="project-media">
+                    <img src="${p.image}" alt="${p.title}" loading="lazy" decoding="async">
+                    <span class="project-chip"><i class="${p.icon || 'fas fa-cube'}"></i></span>
                     <span class="project-date">${p.date || ''}</span>
+                </div>` : ''}
+                <div class="project-content">
+                    ${p.image ? '' : `<div class="project-top"><i class="project-icon ${p.icon || 'fas fa-cube'}"></i><span class="project-date">${p.date || ''}</span></div>`}
+                    <h3 class="project-title">${p.title}</h3>
+                    <p class="project-desc">${p.description}</p>
+                    <div class="project-tags">${(p.technologies || []).map(t => `<span class="tag">${t}</span>`).join('')}</div>
+                    ${linkHTML ? `<div class="project-links">${linkHTML}</div>` : ''}
                 </div>
-                <h3 class="project-title">${p.title}</h3>
-                <p class="project-desc">${p.description}</p>
-                <div class="project-tags">${(p.technologies || []).map(t => `<span class="tag">${t}</span>`).join('')}</div>
-                ${linkHTML ? `<div class="project-links">${linkHTML}</div>` : ''}
             </article>`;
         }).join('');
     } catch (e) { console.error(e); }
@@ -235,7 +252,7 @@ function initNavigation() {
             const target = document.querySelector(link.getAttribute('href'));
             if (target) {
                 e.preventDefault();
-                window.scrollTo({ top: target.offsetTop - 70, behavior: 'smooth' });
+                scrollToEl(target, true);
             }
             menu.classList.remove('active');
             toggle.classList.remove('active');
@@ -252,7 +269,7 @@ function initScrollEffects() {
         navbar.classList.toggle('scrolled', window.scrollY > 50);
         let current = '';
         sections.forEach(s => {
-            if (window.scrollY >= s.offsetTop - 120) current = s.id;
+            if (s.getBoundingClientRect().top <= 130) current = s.id;
         });
         links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === `#${current}`));
     };
