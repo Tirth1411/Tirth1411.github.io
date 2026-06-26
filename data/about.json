@@ -1,0 +1,34 @@
+{
+  "_instructions": "About section.",
+  "sectionTitle": "About Me",
+  "image": "assets/images/about.jpg",
+  "content": [
+    "Passionate professional."
+  ],
+  "highlights": [
+    {
+      "icon": "fas fa-palette",
+      "title": "Detail Oriented",
+      "description": "User-centered approach with focus on usability"
+    },
+    {
+      "icon": "fas fa-code",
+      "title": "Clean Code",
+      "description": "Writing maintainable, scalable code"
+    },
+    {
+      "icon": "fas fa-users",
+      "title": "Collaborative",
+      "description": "Strong communication skills"
+    },
+    {
+      "icon": "fas fa-lightbulb",
+      "title": "Creative Problem Solver",
+      "description": "Finding innovative solutions"
+    }
+  ],
+  "resume": {
+    "text": "Download Resume",
+    "href": "assets/files/resume.pdf"
+  }
+}

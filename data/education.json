@@ -1,0 +1,64 @@
+{
+  "_instructions": "Add your education and certifications.",
+  "sectionTitle": "Education & Certifications",
+  "education": [
+    {
+      "degree": "Master of Science",
+      "institution": "Middle Tennessee State University",
+      "period": "2024 – Present",
+      "location": "",
+      "description": "GPA: 4.00/4.00",
+      "honors": [
+        "GPA: 4.00/4.00"
+      ]
+    },
+    {
+      "degree": "Bachelor of Technology",
+      "institution": "Parul University",
+      "period": "2020 – 2024",
+      "location": "",
+      "description": "GPA: 9.06/10.00",
+      "honors": [
+        "GPA: 9.06/10.00"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Python for Machine Learning & Data Science",
+      "issuer": "Udemy",
+      "date": "",
+      "description": ""
+    },
+    {
+      "name": "Machine Learning Specialization",
+      "issuer": "Coursera",
+      "date": "",
+      "description": ""
+    },
+    {
+      "name": "Machine Learning Fast-Track Workshop",
+      "issuer": "Google",
+      "date": "",
+      "description": ""
+    },
+    {
+      "name": "Cloud Computing",
+      "issuer": "Parul University",
+      "date": "",
+      "description": ""
+    },
+    {
+      "name": "Introduction to Internet of Things",
+      "issuer": "NPTEL",
+      "date": "",
+      "description": ""
+    },
+    {
+      "name": "Web Development",
+      "issuer": "1Stop.ai",
+      "date": "",
+      "description": ""
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "_instructions": "Add your work experience here. Copy the experience object for each job.",
+  "sectionTitle": "Professional Experience",
+  "experiences": [
+    {
+      "title": "Graduate Assistant (Administrative)",
+      "company": "Middle Tennessee State University",
+      "period": "Aug 2025 – Present",
+      "location": "",
+      "description": "Built data pipelines and dashboards using Python, SQL, Power BI, and Tableau to automate reporting and compliance tracking. Prototyped an LLM-based assistant (LangChain) to answer staff queries from internal documentation, reducing manual lookups. Performed data analysis and validation with Pandas/NumPy, improving reporting accuracy and reducing manual effort. Collaborated with cross-functional teams using Git for version control and process automation.",
+      "responsibilities": [
+        "Built data pipelines and dashboards using Python, SQL, Power BI, and Tableau to automate reporting and compliance tracking",
+        "Prototyped an LLM-based assistant (LangChain) to answer staff queries from internal documentation, reducing manual lookups",
+        "Performed data analysis and validation with Pandas/NumPy, improving reporting accuracy and reducing manual effort",
+        "Collaborated with cross-functional teams using Git for version control and process automation"
+      ]
+    },
+    {
+      "title": "AI/ML Intern",
+      "company": "NeuralForge AI",
+      "period": "Mar 2024 – July 2024",
+      "location": "",
+      "description": "Built and deployed ML and GenAI models (TensorFlow, PyTorch, HuggingFace) for predictive analytics and automation. Fine-tuned LLMs and built RAG pipelines (LangChain, vector databases) for internal Q&A and document search use cases. Developed end-to-end ML pipelines: preprocessing, EDA, feature engineering, training, and evaluation. Owned model deployment and monitoring using AWS, Docker, MLflow, and REST APIs as part of MLOps workflows. Collaborated in KT sessions on enterprise GenAI architectures and scalable model management practices.",
+      "responsibilities": [
+        "Built and deployed ML and GenAI models (TensorFlow, PyTorch, HuggingFace) for predictive analytics and automation",
+        "Fine-tuned LLMs and built RAG pipelines (LangChain, vector databases) for internal Q&A and document search use cases",
+        "Developed end-to-end ML pipelines: preprocessing, EDA, feature engineering, training, and evaluation",
+        "Owned model deployment and monitoring using AWS, Docker, MLflow, and REST APIs as part of MLOps workflows",
+        "Collaborated in KT sessions on enterprise GenAI architectures and scalable model management practices"
+      ]
+    },
+    {
+      "title": "Data Science Intern",
+      "company": "SlashMark",
+      "period": "Dec 2023 – Mar 2024",
+      "location": "",
+      "description": "Built ML pipelines (Pandas, NumPy, Scikit-learn) for predictive analytics with feature engineering and EDA. Trained supervised models (Random Forest, Neural Networks) achieving up to 90% accuracy. Created visual analytics reports (Matplotlib, Seaborn) to communicate insights for business decisions.",
+      "responsibilities": [
+        "Built ML pipelines (Pandas, NumPy, Scikit-learn) for predictive analytics with feature engineering and EDA",
+        "Trained supervised models (Random Forest, Neural Networks) achieving up to 90% accuracy",
+        "Created visual analytics reports (Matplotlib, Seaborn) to communicate insights for business decisions"
+      ]
+    }
+  ]
+}

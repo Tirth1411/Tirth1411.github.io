@@ -1,0 +1,231 @@
+{
+  "_instructions": "Organize your skills with proficiency levels (0-100).",
+  "sectionTitle": "Skills & Expertise",
+  "subtitle": "Technologies and tools I work with",
+  "categories": [
+    {
+      "name": "Programming Languages",
+      "icon": "fas fa-code",
+      "skills": [
+        {
+          "name": "Python",
+          "level": 83
+        },
+        {
+          "name": "Java",
+          "level": 80
+        },
+        {
+          "name": "C/C++",
+          "level": 80
+        },
+        {
+          "name": "SQL",
+          "level": 83
+        },
+        {
+          "name": "R",
+          "level": 95
+        },
+        {
+          "name": "JavaScript",
+          "level": 80
+        },
+        {
+          "name": "HTML/CSS",
+          "level": 80
+        }
+      ]
+    },
+    {
+      "name": "Frameworks & Libraries",
+      "icon": "fas fa-toolbox",
+      "skills": [
+        {
+          "name": "TensorFlow",
+          "level": 89
+        },
+        {
+          "name": "PyTorch",
+          "level": 83
+        },
+        {
+          "name": "Keras",
+          "level": 80
+        },
+        {
+          "name": "Scikit-Learn",
+          "level": 83
+        },
+        {
+          "name": "HuggingFace",
+          "level": 85
+        },
+        {
+          "name": "LangChain",
+          "level": 88
+        },
+        {
+          "name": "LlamaIndex",
+          "level": 80
+        },
+        {
+          "name": "OpenCV",
+          "level": 82
+        },
+        {
+          "name": "FastAPI",
+          "level": 82
+        },
+        {
+          "name": "Pandas",
+          "level": 86
+        },
+        {
+          "name": "NumPy",
+          "level": 86
+        },
+        {
+          "name": "Matplotlib",
+          "level": 83
+        },
+        {
+          "name": "Seaborn",
+          "level": 83
+        },
+        {
+          "name": "FAISS",
+          "level": 82
+        }
+      ]
+    },
+    {
+      "name": "Tools & Platforms",
+      "icon": "fas fa-wrench",
+      "skills": [
+        {
+          "name": "Git",
+          "level": 83
+        },
+        {
+          "name": "Docker",
+          "level": 83
+        },
+        {
+          "name": "Kubernetes",
+          "level": 80
+        },
+        {
+          "name": "VS Code",
+          "level": 80
+        },
+        {
+          "name": "Jupyter Notebook",
+          "level": 80
+        },
+        {
+          "name": "Google Colaboratory",
+          "level": 80
+        },
+        {
+          "name": "MLflow",
+          "level": 83
+        },
+        {
+          "name": "Power BI",
+          "level": 83
+        },
+        {
+          "name": "Tableau",
+          "level": 83
+        },
+        {
+          "name": "Streamlit",
+          "level": 82
+        },
+        {
+          "name": "AWS",
+          "level": 83
+        },
+        {
+          "name": "MySQL",
+          "level": 80
+        },
+        {
+          "name": "PostgreSQL",
+          "level": 80
+        }
+      ]
+    },
+    {
+      "name": "Technical Skills",
+      "icon": "fas fa-laptop-code",
+      "skills": [
+        {
+          "name": "Machine Learning",
+          "level": 80
+        },
+        {
+          "name": "Deep Learning",
+          "level": 84
+        },
+        {
+          "name": "Generative AI",
+          "level": 80
+        },
+        {
+          "name": "LLMs",
+          "level": 83
+        },
+        {
+          "name": "RAG",
+          "level": 85
+        },
+        {
+          "name": "Prompt Engineering",
+          "level": 80
+        },
+        {
+          "name": "Computer Vision",
+          "level": 80
+        },
+        {
+          "name": "NLP",
+          "level": 80
+        },
+        {
+          "name": "Neural Networks",
+          "level": 83
+        },
+        {
+          "name": "Transfer Learning",
+          "level": 82
+        },
+        {
+          "name": "Model Optimization",
+          "level": 80
+        },
+        {
+          "name": "Statistics",
+          "level": 80
+        },
+        {
+          "name": "Data Analysis",
+          "level": 83
+        },
+        {
+          "name": "Cloud Computing",
+          "level": 80
+        },
+        {
+          "name": "Vector Databases",
+          "level": 83
+        },
+        {
+          "name": "ETL Pipelines",
+          "level": 80
+        }
+      ]
+    }
+  ]
+}

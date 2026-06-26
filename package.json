@@ -1,0 +1,36 @@
+{
+  "name": "modern-aesthetic-portfolio",
+  "version": "1.0.0",
+  "description": "A modern, aesthetic portfolio website template with clean design and light theme",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000"
+  },
+  "keywords": [
+    "portfolio",
+    "template",
+    "website",
+    "modern",
+    "aesthetic",
+    "clean",
+    "light-theme",
+    "designer",
+    "developer",
+    "json-driven",
+    "responsive",
+    "vanilla-js",
+    "ux-designer",
+    "frontend"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/modern-aesthetic-portfolio"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/modern-aesthetic-portfolio/issues"
+  },
+  "homepage": "https://yourusername.github.io/modern-aesthetic-portfolio"
+}
