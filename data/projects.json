@@ -1,526 +1,102 @@
 {
-  "_instructions": "Add your projects.",
-  "sectionTitle": "Featured Work",
-  "subtitle": "A selection of projects I've designed and developed",
+  "sectionTitle": "Selected Projects",
   "projects": [
     {
       "title": "Multilingual Legal Document Intelligence System",
-      "category": "Backend Development",
-      "description": "Building a RAG pipeline (FAISS, LangChain) for multilingual legal document search and Q&A. Using PaddleOCR for layout-aware extraction and FastAPI for scalable inference endpoints.",
-      "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&q=80&fit=crop",
-      "tags": [
+      "date": "Jan 2026 — Present",
+      "icon": "fas fa-scale-balanced",
+      "description": "A RAG pipeline (FAISS + LangChain) for multilingual legal-document search and Q&A, using PaddleOCR for layout-aware extraction and FastAPI for scalable inference endpoints.",
+      "technologies": [
         "GenAI",
         "RAG",
-        "OCR",
-        "LLM",
-        "FAISS",
         "LangChain",
+        "FAISS",
         "PaddleOCR",
-        "FastAPI"
+        "FastAPI",
+        "LLM"
       ],
-      "icon": "fas fa-brain",
-      "highlights": [
-        "User-centered design approach",
-        "Responsive and accessible"
-      ],
-      "links": {
-        "live": "",
-        "github": "",
-        "case_study": "",
-        "prototype": ""
-      },
-      "featured": true
+      "links": {}
     },
     {
-      "title": "GravWaveFormer",
-      "category": "Data Science",
-      "description": "Built a CNN-Transformer + GraphSAGE ensemble achieving 0.934 ROC-AUC with under 2ms inference latency. Added explainability (GradCAM, ablation studies) and an interactive Streamlit dashboard.",
-      "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&q=80&fit=crop",
-      "tags": [
-        "Deep Learning",
+      "title": "GravWaveFormer — GW Detection Ensemble",
+      "date": "Sep 2025 — Dec 2025",
+      "icon": "fas fa-wave-square",
+      "description": "A CNN-Transformer + GraphSAGE ensemble for gravitational-wave detection — 0.934 ROC-AUC at under 2 ms inference latency — with GradCAM explainability, ablation studies and an interactive Streamlit dashboard.",
+      "technologies": [
+        "PyTorch",
         "CNN-Transformer",
         "GraphSAGE",
         "GradCAM",
         "Streamlit"
       ],
-      "icon": "fas fa-brain",
-      "highlights": [
-        "User-centered design approach",
-        "Responsive and accessible"
-      ],
-      "links": {
-        "live": "",
-        "github": "",
-        "case_study": "",
-        "prototype": ""
-      },
-      "featured": false
+      "links": {}
     },
     {
       "title": "Cross-Camera Player Mapping",
-      "category": "Software Development",
-      "description": "Built a CV tracking pipeline with YOLOv11 + Deep SORT and ResNet-based Re-ID, reaching 95% cross-camera ID consistency.",
-      "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&q=80&fit=crop",
-      "tags": [
+      "date": "Jul 2025",
+      "icon": "fas fa-video",
+      "description": "A computer-vision tracking pipeline (YOLOv11 + Deep SORT with ResNet-based Re-ID) reaching 95% cross-camera ID consistency for player mapping.",
+      "technologies": [
         "YOLOv11",
         "Deep SORT",
-        "ResNet"
+        "ResNet",
+        "Re-ID",
+        "Computer Vision"
       ],
-      "icon": "fas fa-project-diagram",
-      "highlights": [
-        "User-centered design approach",
-        "Responsive and accessible"
-      ],
-      "links": {
-        "live": "",
-        "github": "",
-        "case_study": "",
-        "prototype": ""
-      },
-      "featured": false
+      "links": {}
     },
     {
       "title": "Plant Disease Detection",
-      "category": "Software Development",
-      "description": "Built a CNN classifier with transfer learning for plant disease identification from leaf images.",
-      "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&q=80&fit=crop",
-      "tags": [
+      "date": "Dec 2024",
+      "icon": "fas fa-leaf",
+      "description": "A CNN classifier with transfer learning that identifies plant diseases from leaf images.",
+      "technologies": [
         "TensorFlow",
         "OpenCV",
-        "CNN"
+        "CNN",
+        "Transfer Learning"
       ],
-      "icon": "fas fa-project-diagram",
-      "highlights": [
-        "User-centered design approach",
-        "Responsive and accessible"
-      ],
-      "links": {
-        "live": "",
-        "github": "",
-        "case_study": "",
-        "prototype": ""
-      },
-      "featured": false
+      "links": {}
     },
     {
       "title": "Diabetic Retinopathy Screening",
-      "category": "Software Development",
-      "description": "Built a deep learning model for retinopathy detection achieving 94.7% accuracy on medical images.",
-      "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&q=80&fit=crop",
-      "tags": [
+      "date": "Feb 2024",
+      "icon": "fas fa-eye",
+      "description": "A deep-learning model for diabetic-retinopathy detection, reaching 94.7% accuracy on retinal images.",
+      "technologies": [
         "TensorFlow",
         "Deep Learning",
-        "CNN"
-      ],
-      "icon": "fas fa-project-diagram",
-      "highlights": [
-        "User-centered design approach",
-        "Responsive and accessible"
+        "CNN",
+        "Medical Imaging"
       ],
       "links": {
-        "live": "",
-        "github": "",
-        "case_study": "",
-        "prototype": ""
-      },
-      "featured": false
+        "github": "https://github.com/Tirth1411/Diabetic-Retinopathy-Screening"
+      }
     },
     {
       "title": "Emotion Detection",
-      "category": "Software Development",
-      "description": "Built a CNN-based facial emotion classifier for real-time emotion recognition.",
-      "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&q=80&fit=crop",
-      "tags": [
+      "date": "Dec 2023",
+      "icon": "fas fa-face-smile",
+      "description": "A CNN-based facial-emotion classifier for real-time emotion recognition.",
+      "technologies": [
         "TensorFlow",
-        "Facial Recognition",
-        "CNN"
+        "CNN",
+        "Facial Recognition"
       ],
-      "icon": "fas fa-project-diagram",
-      "highlights": [
-        "User-centered design approach",
-        "Responsive and accessible"
-      ],
-      "links": {
-        "live": "",
-        "github": "",
-        "case_study": "",
-        "prototype": ""
-      },
-      "featured": false
+      "links": {}
     },
     {
       "title": "Speech-To-Speech Multilingual Translation",
-      "category": "Backend Development",
-      "description": "Built a real-time speech translation app with voice cloning for Indian languages.",
-      "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&q=80&fit=crop",
-      "tags": [
+      "date": "Mar 2023",
+      "icon": "fas fa-language",
+      "description": "A real-time speech-translation app with voice cloning for Indian languages, built on HuggingFace models and the Google API.",
+      "technologies": [
         "HuggingFace",
-        "Google API"
+        "Google API",
+        "Voice Cloning",
+        "NLP"
       ],
-      "icon": "fas fa-server",
-      "highlights": [
-        "User-centered design approach",
-        "Responsive and accessible"
-      ],
-      "links": {
-        "live": "",
-        "github": "",
-        "case_study": "",
-        "prototype": ""
-      },
-      "featured": false
-    },
-    {
-      "title": "langchain-rag-retrieval-augmented-generation-for-document-understanding",
-      "category": "Software Development",
-      "description": "Two RAG pipelines (OpenAI and open-source Hugging Face) that answer questions over a PDF with LangChain + FAISS.",
-      "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&q=80&fit=crop",
-      "tags": [
-        "Jupyter Notebook"
-      ],
-      "icon": "fas fa-project-diagram",
-      "highlights": [
-        "User-centered design approach",
-        "Responsive and accessible"
-      ],
-      "links": {
-        "live": "https://github.com/Tirth1411/langchain-rag-retrieval-augmented-generation-for-document-understanding",
-        "github": "https://github.com/Tirth1411/langchain-rag-retrieval-augmented-generation-for-document-understanding",
-        "case_study": "",
-        "prototype": ""
-      },
-      "featured": false
-    },
-    {
-      "title": "Analyze-Daily-Weather-Data",
-      "category": "Software Development",
-      "description": "Exploratory analysis and decision-tree forecasting of afternoon humidity from morning weather data.",
-      "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&q=80&fit=crop",
-      "tags": [
-        "Jupyter Notebook"
-      ],
-      "icon": "fas fa-project-diagram",
-      "highlights": [
-        "User-centered design approach",
-        "Responsive and accessible"
-      ],
-      "links": {
-        "live": "https://github.com/Tirth1411/Analyze-Daily-Weather-Data",
-        "github": "https://github.com/Tirth1411/Analyze-Daily-Weather-Data",
-        "case_study": "",
-        "prototype": ""
-      },
-      "featured": false
-    },
-    {
-      "title": "-Fake-News-Detection",
-      "category": "Software Development",
-      "description": "NLP classifier separating real from fake news using TF-IDF and scikit-learn models.",
-      "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&q=80&fit=crop",
-      "tags": [
-        "Jupyter Notebook"
-      ],
-      "icon": "fas fa-project-diagram",
-      "highlights": [
-        "User-centered design approach",
-        "Responsive and accessible"
-      ],
-      "links": {
-        "live": "https://github.com/Tirth1411/-Fake-News-Detection",
-        "github": "https://github.com/Tirth1411/-Fake-News-Detection",
-        "case_study": "",
-        "prototype": ""
-      },
-      "featured": false
-    },
-    {
-      "title": "-Customer-Churn-Prediction-for-a-Subscription-Service-",
-      "category": "Software Development",
-      "description": "Predicts subscription churn with scikit-learn & XGBoost (SMOTE, model comparison, ~93% accuracy).",
-      "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&q=80&fit=crop",
-      "tags": [
-        "Jupyter Notebook"
-      ],
-      "icon": "fas fa-project-diagram",
-      "highlights": [
-        "User-centered design approach",
-        "Responsive and accessible"
-      ],
-      "links": {
-        "live": "https://github.com/Tirth1411/-Customer-Churn-Prediction-for-a-Subscription-Service-",
-        "github": "https://github.com/Tirth1411/-Customer-Churn-Prediction-for-a-Subscription-Service-",
-        "case_study": "",
-        "prototype": ""
-      },
-      "featured": false
-    },
-    {
-      "title": "Diabetic-Retinopathy-Screening",
-      "category": "Software Development",
-      "description": "CNN that grades diabetic-retinopathy severity from retinal fundus images (Keras/TensorFlow, APTOS 2019).",
-      "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&q=80&fit=crop",
-      "tags": [
-        "Jupyter Notebook"
-      ],
-      "icon": "fas fa-project-diagram",
-      "highlights": [
-        "User-centered design approach",
-        "Responsive and accessible"
-      ],
-      "links": {
-        "live": "https://github.com/Tirth1411/Diabetic-Retinopathy-Screening",
-        "github": "https://github.com/Tirth1411/Diabetic-Retinopathy-Screening",
-        "case_study": "",
-        "prototype": ""
-      },
-      "featured": false
-    },
-    {
-      "title": "Gender-Age-Prediction-",
-      "category": "Backend Development",
-      "description": "Real-time gender and age estimation from face images using OpenCV deep-learning models.",
-      "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&q=80&fit=crop",
-      "tags": [
-        "Python"
-      ],
-      "icon": "fas fa-project-diagram",
-      "highlights": [
-        "User-centered design approach",
-        "Responsive and accessible"
-      ],
-      "links": {
-        "live": "https://github.com/Tirth1411/Gender-Age-Prediction-",
-        "github": "https://github.com/Tirth1411/Gender-Age-Prediction-",
-        "case_study": "",
-        "prototype": ""
-      },
-      "featured": false
-    },
-    {
-      "title": "multi-agentic-rag",
-      "category": "Backend Development",
-      "description": "Multi-agent Retrieval-Augmented Generation app built with Streamlit and LangChain.",
-      "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&q=80&fit=crop",
-      "tags": [
-        "Python"
-      ],
-      "icon": "fas fa-project-diagram",
-      "highlights": [
-        "User-centered design approach",
-        "Responsive and accessible"
-      ],
-      "links": {
-        "live": "https://github.com/Tirth1411/multi-agentic-rag",
-        "github": "https://github.com/Tirth1411/multi-agentic-rag",
-        "case_study": "",
-        "prototype": ""
-      },
-      "featured": false
-    },
-    {
-      "title": "rag-from-scratch",
-      "category": "Software Development",
-      "description": "Building a Retrieval-Augmented Generation system step by step from first principles.",
-      "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&q=80&fit=crop",
-      "tags": [
-        "JavaScript"
-      ],
-      "icon": "fas fa-project-diagram",
-      "highlights": [
-        "User-centered design approach",
-        "Responsive and accessible"
-      ],
-      "links": {
-        "live": "https://github.com/Tirth1411/rag-from-scratch",
-        "github": "https://github.com/Tirth1411/rag-from-scratch",
-        "case_study": "",
-        "prototype": ""
-      },
-      "featured": false
-    },
-    {
-      "title": "rag-chatbot",
-      "category": "Backend Development",
-      "description": "Retrieval-Augmented Generation chatbot in Python — answers questions grounded in your own documents.",
-      "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&q=80&fit=crop",
-      "tags": [
-        "Python",
-        "TypeScript",
-        "CSS",
-        "JavaScript",
-        "Makefile",
-        "HTML",
-        "Mako",
-        "Shell"
-      ],
-      "icon": "fas fa-brain",
-      "highlights": [
-        "User-centered design approach",
-        "Responsive and accessible"
-      ],
-      "links": {
-        "live": "https://github.com/Tirth1411/rag-chatbot",
-        "github": "https://github.com/Tirth1411/rag-chatbot",
-        "case_study": "",
-        "prototype": ""
-      },
-      "featured": false
-    },
-    {
-      "title": "mlops-app",
-      "category": "Backend Development",
-      "description": "MLOps deployment workflow using Infrastructure-as-Code (Terraform) for full-stack model serving.",
-      "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&q=80&fit=crop",
-      "tags": [
-        "HCL",
-        "Python",
-        "Jupyter Notebook",
-        "Dockerfile",
-        "Shell"
-      ],
-      "icon": "fas fa-project-diagram",
-      "highlights": [
-        "User-centered design approach",
-        "Responsive and accessible"
-      ],
-      "links": {
-        "live": "https://github.com/Tirth1411/mlops-app",
-        "github": "https://github.com/Tirth1411/mlops-app",
-        "case_study": "",
-        "prototype": ""
-      },
-      "featured": false
-    },
-    {
-      "title": "creditcardfrauddetection-mlops",
-      "category": "Backend Development",
-      "description": "End-to-end MLOps pipeline for credit-card fraud detection (training, tracking & deployment).",
-      "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&q=80&fit=crop",
-      "tags": [
-        "Jupyter Notebook",
-        "Python",
-        "HTML",
-        "CSS",
-        "Dockerfile"
-      ],
-      "icon": "fas fa-brain",
-      "highlights": [
-        "User-centered design approach",
-        "Responsive and accessible"
-      ],
-      "links": {
-        "live": "https://github.com/Tirth1411/creditcardfrauddetection-mlops",
-        "github": "https://github.com/Tirth1411/creditcardfrauddetection-mlops",
-        "case_study": "",
-        "prototype": ""
-      },
-      "featured": false
-    },
-    {
-      "title": "text-analysis-using-nlp-streamlit",
-      "category": "Backend Development",
-      "description": "Interactive Streamlit app for NLP text analysis — sentiment, keywords and text statistics in the browser.",
-      "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&q=80&fit=crop",
-      "tags": [
-        "Python"
-      ],
-      "icon": "fas fa-project-diagram",
-      "highlights": [
-        "User-centered design approach",
-        "Responsive and accessible"
-      ],
-      "links": {
-        "live": "https://github.com/Tirth1411/text-analysis-using-nlp-streamlit",
-        "github": "https://github.com/Tirth1411/text-analysis-using-nlp-streamlit",
-        "case_study": "",
-        "prototype": ""
-      },
-      "featured": false
-    },
-    {
-      "title": "contribution-history",
-      "category": "Development",
-      "description": "Generated GitHub contribution history",
-      "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&q=80&fit=crop",
-      "tags": [],
-      "icon": "fas fa-project-diagram",
-      "highlights": [
-        "User-centered design approach",
-        "Responsive and accessible"
-      ],
-      "links": {
-        "live": "https://github.com/Tirth1411/contribution-history",
-        "github": "https://github.com/Tirth1411/contribution-history",
-        "case_study": "",
-        "prototype": ""
-      },
-      "featured": false
-    },
-    {
-      "title": "multimodal-live-rag-voice",
-      "category": "Development",
-      "description": "Practice application demonstrating full-stack development skills",
-      "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&q=80&fit=crop",
-      "tags": [],
-      "icon": "fas fa-project-diagram",
-      "highlights": [
-        "User-centered design approach",
-        "Responsive and accessible"
-      ],
-      "links": {
-        "live": "https://github.com/Tirth1411/multimodal-live-rag-voice",
-        "github": "https://github.com/Tirth1411/multimodal-live-rag-voice",
-        "case_study": "",
-        "prototype": ""
-      },
-      "featured": false
-    },
-    {
-      "title": "CSCI_5560",
-      "category": "Data Science",
-      "description": "GitHub repository: CSCI_5560",
-      "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&q=80&fit=crop",
-      "tags": [
-        "JavaScript",
-        "CSS",
-        "HTML"
-      ],
-      "icon": "fas fa-brain",
-      "highlights": [
-        "User-centered design approach",
-        "Responsive and accessible"
-      ],
-      "links": {
-        "live": "https://github.com/Tirth1411/CSCI_5560",
-        "github": "https://github.com/Tirth1411/CSCI_5560",
-        "case_study": "",
-        "prototype": ""
-      },
-      "featured": false
-    },
-    {
-      "title": "CSCI_5560_Final_Submission",
-      "category": "Data Science",
-      "description": "GitHub repository: CSCI_5560_Final_Submission",
-      "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&q=80&fit=crop",
-      "tags": [
-        "CSS",
-        "JavaScript",
-        "HTML",
-        "C#"
-      ],
-      "icon": "fas fa-brain",
-      "highlights": [
-        "User-centered design approach",
-        "Responsive and accessible"
-      ],
-      "links": {
-        "live": "https://github.com/Tirth1411/CSCI_5560_Final_Submission",
-        "github": "https://github.com/Tirth1411/CSCI_5560_Final_Submission",
-        "case_study": "",
-        "prototype": ""
-      },
-      "featured": false
+      "links": {}
     }
   ]
 }

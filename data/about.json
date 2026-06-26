@@ -1,34 +1,30 @@
 {
-  "_instructions": "About section.",
-  "sectionTitle": "About Me",
-  "image": "assets/images/about.jpg",
+  "sectionTitle": "About",
   "content": [
-    "Passionate professional."
+    "I'm a <strong>Data Science master's candidate at Middle Tennessee State University</strong> (4.00 GPA) who builds AI systems across the full lifecycle — data engineering, model training and fine-tuning, and production deployment.",
+    "My focus is <strong>Generative AI and applied machine learning</strong>: retrieval-augmented generation (RAG) pipelines, LLM fine-tuning, and deep-learning models for computer vision and scientific signal detection. I've shipped this work through internships at <strong>NeuralForge AI</strong> and <strong>SlashMark</strong> and a graduate assistantship at MTSU.",
+    "I'm also a <strong>published researcher</strong> (IEEE Xplore), with work spanning visible-light indoor positioning and IoT-based health monitoring."
   ],
   "highlights": [
     {
-      "icon": "fas fa-palette",
-      "title": "Detail Oriented",
-      "description": "User-centered approach with focus on usability"
+      "icon": "fas fa-robot",
+      "title": "Generative AI & RAG",
+      "description": "LangChain, vector databases and LLM fine-tuning for document intelligence and internal Q&A."
     },
     {
-      "icon": "fas fa-code",
-      "title": "Clean Code",
-      "description": "Writing maintainable, scalable code"
+      "icon": "fas fa-brain",
+      "title": "Deep Learning & CV",
+      "description": "CNN and Transformer models for medical imaging, gravitational-wave detection and multi-camera tracking."
     },
     {
-      "icon": "fas fa-users",
-      "title": "Collaborative",
-      "description": "Strong communication skills"
+      "icon": "fas fa-server",
+      "title": "MLOps & Data Engineering",
+      "description": "AWS, Docker, MLflow and REST APIs; pipelines and BI dashboards in Power BI and Tableau."
     },
     {
-      "icon": "fas fa-lightbulb",
-      "title": "Creative Problem Solver",
-      "description": "Finding innovative solutions"
+      "icon": "fas fa-microscope",
+      "title": "Published Researcher",
+      "description": "IEEE Xplore — visible-light positioning and IoT health-monitoring systems."
     }
-  ],
-  "resume": {
-    "text": "Download Resume",
-    "href": "assets/files/resume.pdf"
-  }
+  ]
 }

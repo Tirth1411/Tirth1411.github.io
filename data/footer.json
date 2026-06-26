@@ -1,27 +1,16 @@
 {
-  "_instructions": "Footer section.",
-  "text": "Designed & Built by Tirth Laheri",
-  "copyright": "© 2026 Tirth Laheri. All rights reserved.",
-  "links": [
-    {
-      "text": "Privacy Policy",
-      "href": "#privacy"
-    },
-    {
-      "text": "Terms",
-      "href": "#terms"
-    }
-  ],
-  "socialLinks": [
-    {
-      "platform": "LinkedIn",
-      "url": "linkedin.com/in/tirthlaheri",
-      "icon": "fab fa-linkedin-in"
-    },
+  "text": "Designed & built by Tirth Laheri",
+  "copyright": "© 2026 Tirth Laheri",
+  "social": [
     {
       "platform": "GitHub",
-      "url": "github.com/Tirth1411",
+      "url": "https://github.com/Tirth1411",
       "icon": "fab fa-github"
+    },
+    {
+      "platform": "LinkedIn",
+      "url": "https://linkedin.com/in/tirthlaheri",
+      "icon": "fab fa-linkedin"
     },
     {
       "platform": "Email",

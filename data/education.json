@@ -1,64 +1,48 @@
 {
-  "_instructions": "Add your education and certifications.",
-  "sectionTitle": "Education & Certifications",
+  "sectionTitle": "Education",
   "education": [
     {
-      "degree": "Master of Science",
-      "institution": "Middle Tennessee State University",
-      "period": "2024 – Present",
-      "location": "",
-      "description": "GPA: 4.00/4.00",
-      "honors": [
-        "GPA: 4.00/4.00"
-      ]
+      "degree": "Master of Science in Data Science",
+      "school": "Middle Tennessee State University",
+      "location": "Murfreesboro, TN",
+      "period": "2024 — Present",
+      "gpa": "4.00 / 4.00",
+      "coursework": "Machine Learning, Statistical Methods, Data Mining, Data Visualization"
     },
     {
-      "degree": "Bachelor of Technology",
-      "institution": "Parul University",
-      "period": "2020 – 2024",
-      "location": "",
-      "description": "GPA: 9.06/10.00",
-      "honors": [
-        "GPA: 9.06/10.00"
-      ]
+      "degree": "B.Tech in Computer Science (IoT)",
+      "school": "Parul University",
+      "location": "India",
+      "period": "2020 — 2024",
+      "gpa": "9.06 / 10",
+      "coursework": "Data Structures, Algorithms, Database Systems, Cloud Computing"
     }
   ],
+  "certsTitle": "Certifications",
   "certifications": [
     {
-      "name": "Python for Machine Learning & Data Science",
-      "issuer": "Udemy",
-      "date": "",
-      "description": ""
+      "name": "Python for ML & Data Science",
+      "issuer": "Udemy"
     },
     {
       "name": "Machine Learning Specialization",
-      "issuer": "Coursera",
-      "date": "",
-      "description": ""
+      "issuer": "Coursera"
     },
     {
-      "name": "Machine Learning Fast-Track Workshop",
-      "issuer": "Google",
-      "date": "",
-      "description": ""
+      "name": "ML Fast-Track Workshop",
+      "issuer": "Google"
     },
     {
       "name": "Cloud Computing",
-      "issuer": "Parul University",
-      "date": "",
-      "description": ""
+      "issuer": "Parul University"
     },
     {
-      "name": "Introduction to Internet of Things",
-      "issuer": "NPTEL",
-      "date": "",
-      "description": ""
+      "name": "Introduction to IoT",
+      "issuer": "NPTEL"
     },
     {
       "name": "Web Development",
-      "issuer": "1Stop.ai",
-      "date": "",
-      "description": ""
+      "issuer": "1Stop.ai"
     }
   ]
 }

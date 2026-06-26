@@ -3,178 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio description">
-    <meta name="keywords" content="portfolio, designer, developer">
-    <meta name="author" content="Your Name">
-    <title>Portfolio</title>
+    <meta name="description" content="Tirth Laheri — Data Scientist & ML / GenAI Engineer. MS Data Science @ MTSU. Building RAG pipelines, deep-learning systems, and production ML.">
+    <meta name="keywords" content="Tirth Laheri, Data Scientist, Machine Learning, GenAI, RAG, Deep Learning, MLOps, Portfolio">
+    <meta name="author" content="Tirth Laheri">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Tirth Laheri — Data Scientist & ML / GenAI Engineer">
+    <meta property="og:description" content="MS Data Science @ MTSU. Building RAG pipelines, deep-learning systems, and production ML.">
+    <meta property="og:type" content="website">
+
+    <title>Tirth Laheri — Data Scientist & ML / GenAI Engineer</title>
+
+    <!-- SVG monogram favicon -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230B0E14'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='52' fill='%235EE6C5' text-anchor='middle'%3ETL%3C/text%3E%3C/svg%3E">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Fraunces (display) · JetBrains Mono (mono) · Sora (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500;700&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <!-- Custom Styles -->
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+    <!-- Atmospheric layers -->
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-glow" aria-hidden="true"></div>
+    <div class="bg-grain" aria-hidden="true"></div>
+
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <a href="#home" class="nav-brand" id="nav-brand">Portfolio</a>
-
-                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-
-                <ul class="nav-menu" id="nav-menu">
-                    <!-- Navigation items will be loaded here -->
-                </ul>
-            </div>
+        <div class="container nav-content">
+            <a href="#hero" class="nav-brand" id="nav-brand">
+                <span class="nav-mark">TL</span>
+                <span class="nav-brand-name" id="nav-brand-name">Tirth Laheri</span>
+            </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu"></ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero-section">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <p class="hero-greeting" id="hero-greeting">Hi there! I'm</p>
-                    <h1 class="hero-name" id="hero-name">Your Name</h1>
-                    <h2 class="hero-title" id="hero-title">Your Title</h2>
-                    <p class="hero-subtitle" id="hero-subtitle">Your subtitle</p>
-                    <p class="hero-description" id="hero-description">Your description</p>
+    <!-- Hero -->
+    <header id="hero" class="hero">
+        <div class="container hero-inner">
+            <div class="hero-meta" id="hero-meta"></div>
 
-                    <div class="hero-cta" id="hero-cta">
-                        <!-- CTA buttons will be loaded here -->
-                    </div>
+            <div class="hero-top">
+                <div class="hero-main">
+                    <p class="eyebrow" id="hero-eyebrow"></p>
+                    <h1 class="hero-name" id="hero-name"></h1>
+                    <p class="hero-role" id="hero-role"></p>
+                    <p class="hero-summary" id="hero-summary"></p>
 
-                    <div class="hero-social" id="hero-social">
-                        <!-- Social links will be loaded here -->
-                    </div>
+                    <div class="hero-cta" id="hero-cta"></div>
+                    <div class="hero-social" id="hero-social"></div>
                 </div>
 
-                <div class="hero-image">
-                    <div class="hero-image-wrapper">
-                        <div class="hero-decoration"></div>
-                        <img src="https://ui-avatars.com/api/?name=Sarah+Chen&size=400&background=FF6B9D&color=fff&bold=true&font-size=0.4" alt="Sarah Chen Profile" id="hero-profile-img">
+                <div class="hero-portrait">
+                    <div class="hero-portrait-frame">
+                        <img id="hero-portrait-img" alt="Tirth Laheri" loading="eager" decoding="async">
+                        <span class="hero-portrait-tag">TL · 2026</span>
                     </div>
                 </div>
             </div>
 
-            <div class="hero-stats" id="hero-stats">
-                <!-- Stats will be loaded here -->
-            </div>
+            <div class="hero-stats" id="hero-stats"></div>
         </div>
-    </section>
+        <a href="#about" class="scroll-cue" aria-label="Scroll to content"><span></span></a>
+    </header>
 
-    <!-- About Section -->
-    <section id="about" class="about-section section">
-        <div class="container">
-            <h2 class="section-title" id="about-title">About Me</h2>
-
-            <div class="about-content">
-                <div class="about-text" id="about-text">
-                    <!-- About content will be loaded here -->
+    <main>
+        <!-- About -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-index">01</span>
+                    <h2 class="section-title" id="about-title">About</h2>
                 </div>
-
-                <div class="about-highlights" id="about-highlights">
-                    <!-- Highlights will be loaded here -->
+                <div class="about-grid">
+                    <div class="about-text" id="about-text"></div>
+                    <div class="about-highlights" id="about-highlights"></div>
                 </div>
             </div>
+        </section>
 
-            <div class="about-resume" id="about-resume">
-                <!-- Resume button will be loaded here -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="experience-section section">
-        <div class="container">
-            <h2 class="section-title" id="experience-title">Work Experience</h2>
-            <div class="experience-grid" id="experience-grid">
-                <!-- Experience cards will be loaded here -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio-section section">
-        <div class="container">
-            <h2 class="section-title" id="portfolio-title">Featured Work</h2>
-            <p class="section-subtitle" id="portfolio-subtitle">A selection of projects I've designed and developed</p>
-
-            <div class="portfolio-grid" id="portfolio-grid">
-                <!-- Portfolio items will be loaded here -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section section">
-        <div class="container">
-            <h2 class="section-title" id="skills-title">Skills & Tools</h2>
-            <p class="section-subtitle" id="skills-subtitle">Technologies and tools I work with</p>
-
-            <div class="skills-categories" id="skills-categories">
-                <!-- Skills categories will be loaded here -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section section">
-        <div class="container">
-            <h2 class="section-title" id="contact-title">Let's Work Together</h2>
-            <p class="section-subtitle" id="contact-subtitle">Have a project in mind?</p>
-
-            <div class="contact-wrapper">
-                <div class="contact-info" id="contact-info">
-                    <!-- Contact info will be loaded here -->
+        <!-- Experience -->
+        <section id="experience" class="section">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-index">02</span>
+                    <h2 class="section-title" id="experience-title">Experience</h2>
                 </div>
+                <div class="timeline" id="experience-list"></div>
+            </div>
+        </section>
 
-                <div class="contact-form-wrapper">
-                    <form id="contact-form" class="contact-form">
-                        <!-- Form fields will be loaded here -->
-                    </form>
+        <!-- Projects -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-index">03</span>
+                    <h2 class="section-title" id="projects-title">Selected Projects</h2>
+                </div>
+                <div class="projects-grid" id="projects-grid"></div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-index">04</span>
+                    <h2 class="section-title" id="skills-title">Technical Skills</h2>
+                </div>
+                <div class="skills-grid" id="skills-grid"></div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section id="education" class="section">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-index">05</span>
+                    <h2 class="section-title" id="education-title">Education</h2>
+                </div>
+                <div class="education-list" id="education-list"></div>
+                <div class="certs">
+                    <h3 class="certs-title" id="certs-title">Certifications</h3>
+                    <div class="certs-grid" id="certs-grid"></div>
                 </div>
             </div>
+        </section>
 
-            <div class="contact-social" id="contact-social">
-                <!-- Social media links will be loaded here -->
+        <!-- Publications -->
+        <section id="publications" class="section">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-index">06</span>
+                    <h2 class="section-title" id="publications-title">Publications</h2>
+                </div>
+                <ol class="pub-list" id="publications-list"></ol>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
+        <!-- Contact -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-index">07</span>
+                    <h2 class="section-title" id="contact-title">Get in touch</h2>
+                </div>
+                <div class="contact-wrap">
+                    <p class="contact-lede" id="contact-lede"></p>
+                    <a class="contact-mail" id="contact-mail" href="#"></a>
+                    <div class="contact-links" id="contact-links"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p class="footer-text" id="footer-text">Designed & Built by You</p>
-                <div class="footer-social" id="footer-social">
-                    <!-- Footer social links will be loaded here -->
-                </div>
-                <p class="footer-copyright" id="footer-copyright">© 2024. All rights reserved.</p>
-                <div class="footer-links" id="footer-links">
-                    <!-- Footer links will be loaded here -->
-                </div>
-            </div>
+        <div class="container footer-inner">
+            <p class="footer-text" id="footer-text"></p>
+            <div class="footer-social" id="footer-social"></div>
+            <p class="footer-copyright" id="footer-copyright"></p>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
 
-    <!-- Custom JavaScript -->
     <script src="assets/js/main.js"></script>
 </body>
 </html>

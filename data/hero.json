@@ -1,55 +1,86 @@
 {
-  "_instructions": "Hero section content - the first thing visitors see on your portfolio.",
-  "greeting": "Hi, I'm",
-  "name": "Tirth Laheri",
-  "title": "Professional Developer",
-  "summary": "Professional Developer with 1+ years of experience specializing in Python, Java, C/C++.",
-  "avatarUrl": "/avatar.png",
-  "highlights": [
+  "meta": [
     {
-      "icon": "fas fa-briefcase",
-      "text": "Professional Experience"
+      "icon": "fas fa-location-dot",
+      "text": "Murfreesboro, TN"
     },
     {
-      "icon": "fas fa-code",
-      "text": "Technical Expertise"
+      "icon": "fas fa-graduation-cap",
+      "text": "MS Data Science · MTSU"
     },
     {
-      "icon": "fas fa-users",
-      "text": "Team Collaboration"
+      "icon": "fas fa-circle",
+      "text": "Open to 2026 roles"
     }
   ],
-  "cta": {
-    "buttons": [
-      {
-        "text": "Get In Touch",
-        "href": "#contact",
-        "type": "primary",
-        "external": false
-      },
-      {
-        "text": "View My Work",
-        "href": "#projects",
-        "type": "secondary",
-        "external": false
-      }
-    ]
-  },
-  "socialLinks": [
+  "eyebrow": "Data Scientist · ML / GenAI Engineer",
+  "name": "Tirth",
+  "accent": "Laheri",
+  "portrait": "assets/images/tirth-laheri.png",
+  "role": [
+    "Machine Learning",
+    "Generative AI &amp; RAG",
+    "Deep Learning"
+  ],
+  "summary": "I build practical AI systems end-to-end — from retrieval-augmented LLM pipelines and deep-learning models to production deployment with modern MLOps tooling.",
+  "cta": [
+    {
+      "text": "Email me",
+      "href": "mailto:tirthlaheri@gmail.com",
+      "type": "primary",
+      "icon": "fas fa-envelope"
+    },
+    {
+      "text": "GitHub",
+      "href": "https://github.com/Tirth1411",
+      "type": "ghost",
+      "icon": "fab fa-github",
+      "external": true
+    },
+    {
+      "text": "LinkedIn",
+      "href": "https://linkedin.com/in/tirthlaheri",
+      "type": "ghost",
+      "icon": "fab fa-linkedin",
+      "external": true
+    },
+    {
+      "text": "Résumé",
+      "href": "assets/Tirth-Laheri-Resume.pdf",
+      "type": "ghost",
+      "icon": "fas fa-file-arrow-down",
+      "download": true
+    }
+  ],
+  "social": [
     {
       "platform": "GitHub",
-      "url": "github.com/Tirth1411",
+      "url": "https://github.com/Tirth1411",
       "icon": "fab fa-github"
     },
     {
       "platform": "LinkedIn",
-      "url": "linkedin.com/in/tirthlaheri",
+      "url": "https://linkedin.com/in/tirthlaheri",
       "icon": "fab fa-linkedin"
     },
     {
       "platform": "Email",
       "url": "mailto:tirthlaheri@gmail.com",
       "icon": "fas fa-envelope"
+    }
+  ],
+  "stats": [
+    {
+      "number": "4.00",
+      "label": "Graduate GPA"
+    },
+    {
+      "number": "03",
+      "label": "Publications"
+    },
+    {
+      "number": "07",
+      "label": "Featured Projects"
     }
   ]
 }

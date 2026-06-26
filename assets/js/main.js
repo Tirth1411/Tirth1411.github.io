@@ -1,625 +1,282 @@
-// ============================================
-// Modern Aesthetic Portfolio - Main JavaScript
-// STANDARDIZED VERSION - Compatible with aesthetic-portfolio JSON structure
-// ============================================
+// ============================================================
+//  Tirth Laheri — Portfolio · data-driven renderer (vanilla JS)
+// ============================================================
 
-document.addEventListener('DOMContentLoaded', () => {
-    initializeApp();
-});
+document.documentElement.classList.add('js');
+document.addEventListener('DOMContentLoaded', init);
 
-// ============================================
-// Initialize Application
-// ============================================
-async function initializeApp() {
-    try {
-        // Load all data sections
-        await Promise.all([
-            loadSiteConfig(),
-            loadNavigation(),
-            loadHero(),
-            loadAbout(),
-            loadExperience(),
-            loadPortfolio(),
-            loadSkills(),
-            loadEducation(),
-            loadContact(),
-            loadFooter()
-        ]);
+async function init() {
+    await Promise.all([
+        loadSiteConfig(),
+        loadNavigation(),
+        loadHero(),
+        loadAbout(),
+        loadExperience(),
+        loadProjects(),
+        loadSkills(),
+        loadEducation(),
+        loadPublications(),
+        loadContact(),
+        loadFooter(),
+    ]);
 
-        // Initialize interactive features
-        initializeNavigation();
-        initializeScrollEffects();
-        initializeBackToTop();
-        initializeAnimations();
-
-        console.log('Portfolio loaded successfully!');
-    } catch (error) {
-        console.error('Error initializing application:', error);
-    }
+    initNavigation();
+    initScrollEffects();
+    initBackToTop();
+    initReveal();
 }
 
-// ============================================
-// Load Site Configuration
-// ============================================
+const $ = (id) => document.getElementById(id);
+async function getJSON(path) {
+    const res = await fetch(path);
+    if (!res.ok) throw new Error(`${path} → ${res.status}`);
+    return res.json();
+}
+
+// ---------- Site config ----------
 async function loadSiteConfig() {
     try {
-        const response = await fetch('data/site-config.json');
-        const data = await response.json();
-
-        document.title = data.title;
-        document.querySelector('meta[name="description"]').setAttribute('content', data.description);
-        document.querySelector('meta[name="keywords"]').setAttribute('content', data.keywords);
-        document.querySelector('meta[name="author"]').setAttribute('content', data.author);
-    } catch (error) {
-        console.error('Error loading site config:', error);
-    }
+        const d = await getJSON('data/site-config.json');
+        if (d.title) document.title = d.title;
+        const set = (sel, v) => { const el = document.querySelector(sel); if (el && v) el.setAttribute('content', v); };
+        set('meta[name="description"]', d.description);
+        set('meta[name="keywords"]', d.keywords);
+        set('meta[name="author"]', d.author);
+    } catch (e) { console.error(e); }
 }
 
-// ============================================
-// Load Navigation
-// ============================================
+// ---------- Navigation ----------
 async function loadNavigation() {
     try {
-        const response = await fetch('data/navigation.json');
-        const data = await response.json();
-
-        const brandElement = document.getElementById('nav-brand');
-        if (brandElement) {
-            brandElement.textContent = data.brand.name;
-            brandElement.href = data.brand.href;
-        }
-
-        const navMenu = document.getElementById('nav-menu');
-        if (navMenu && data.menuItems) {
-            navMenu.innerHTML = data.menuItems.map(item => `
-                <li><a href="${item.href}" class="nav-link">${item.text}</a></li>
-            `).join('');
-        }
-    } catch (error) {
-        console.error('Error loading navigation:', error);
-    }
+        const d = await getJSON('data/navigation.json');
+        if (d.brand?.name) $('nav-brand-name').textContent = d.brand.name;
+        $('nav-menu').innerHTML = (d.menuItems || []).map(i =>
+            `<li><a href="${i.href}" class="nav-link">${i.text}</a></li>`).join('');
+    } catch (e) { console.error(e); }
 }
 
-// ============================================
-// Load Hero Section
-// ============================================
+// ---------- Hero ----------
 async function loadHero() {
     try {
-        const response = await fetch('data/hero.json');
-        const data = await response.json();
+        const d = await getJSON('data/hero.json');
 
-        document.getElementById('hero-greeting').textContent = data.greeting;
-        document.getElementById('hero-name').textContent = data.name;
-        document.getElementById('hero-title').textContent = data.title;
+        $('hero-meta').innerHTML = (d.meta || []).map(m =>
+            `<span><i class="${m.icon}"></i>${m.text}</span>`).join('');
 
-        // Support both new "summary" and old "subtitle"/"description"
-        const summary = data.summary || data.subtitle || '';
-        const description = data.description || '';
-        document.getElementById('hero-subtitle').textContent = summary;
-        if (document.getElementById('hero-description')) {
-            document.getElementById('hero-description').textContent = description || summary;
-        }
+        const portrait = $('hero-portrait-img');
+        if (portrait && d.portrait) { portrait.src = d.portrait; portrait.alt = `${d.name} ${d.accent || ''}`.trim(); }
 
-        // CTA buttons - support both new nested structure and old flat array
-        const ctaContainer = document.getElementById('hero-cta');
-        if (ctaContainer && data.cta) {
-            const buttons = data.cta.buttons || data.cta;
-            ctaContainer.innerHTML = buttons.map(button => `
-                <a href="${button.href}" class="btn btn-${button.type}">${button.text}</a>
-            `).join('');
-        }
+        $('hero-eyebrow').textContent = d.eyebrow || '';
+        $('hero-name').innerHTML = d.accent
+            ? `${d.name} <span class="accent">${d.accent}</span>`
+            : (d.name || '');
+        $('hero-role').innerHTML = (d.role || []).join('<span class="sep">/</span>');
+        $('hero-summary').textContent = d.summary || '';
 
-        // Social links
-        const socialContainer = document.getElementById('hero-social');
-        if (socialContainer && data.socialLinks) {
-            socialContainer.innerHTML = data.socialLinks.map(link => `
-                <a href="${link.url}" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="${link.platform}">
-                    <i class="${link.icon}"></i>
-                </a>
-            `).join('');
-        }
+        $('hero-cta').innerHTML = (d.cta || []).map(b =>
+            `<a href="${b.href}" class="btn btn-${b.type || 'ghost'}"${b.download ? ' download' : ''}${b.external ? ' target="_blank" rel="noopener"' : ''}>${b.icon ? `<i class="${b.icon}"></i>` : ''}${b.text}</a>`).join('');
 
-        // Stats/Highlights - support both new "highlights" and old "stats"
-        const statsContainer = document.getElementById('hero-stats');
-        if (statsContainer) {
-            const items = data.highlights || data.stats || [];
-            statsContainer.innerHTML = items.map(item => {
-                // Support both formats: {icon, text} and {number, label}
-                if (item.icon && item.text) {
-                    return `
-                        <div class="stat-item">
-                            <i class="${item.icon}"></i>
-                            <span class="stat-label">${item.text}</span>
-                        </div>
-                    `;
-                } else {
-                    return `
-                        <div class="stat-item">
-                            <span class="stat-number">${item.number}</span>
-                            <span class="stat-label">${item.label}</span>
-                        </div>
-                    `;
-                }
-            }).join('');
-        }
-    } catch (error) {
-        console.error('Error loading hero section:', error);
-    }
+        $('hero-social').innerHTML = (d.social || []).map(s =>
+            `<a href="${s.url}" target="_blank" rel="noopener" class="social-link" aria-label="${s.platform}"><i class="${s.icon}"></i></a>`).join('');
+
+        $('hero-stats').innerHTML = (d.stats || []).map(s =>
+            `<div class="stat-item"><span class="stat-number">${s.number}</span><span class="stat-label">${s.label}</span></div>`).join('');
+    } catch (e) { console.error(e); }
 }
 
-// ============================================
-// Load About Section
-// ============================================
+// ---------- About ----------
 async function loadAbout() {
     try {
-        const response = await fetch('data/about.json');
-        const data = await response.json();
-
-        document.getElementById('about-title').textContent = data.sectionTitle;
-
-        // About text
-        const textContainer = document.getElementById('about-text');
-        if (textContainer && data.content) {
-            textContainer.innerHTML = data.content.map(paragraph => `
-                <p>${paragraph}</p>
-            `).join('');
-        }
-
-        // Highlights
-        const highlightsContainer = document.getElementById('about-highlights');
-        if (highlightsContainer && data.highlights) {
-            highlightsContainer.innerHTML = data.highlights.map(highlight => `
-                <div class="highlight-card">
-                    <i class="${highlight.icon}"></i>
-                    <h3>${highlight.title}</h3>
-                    <p>${highlight.description}</p>
-                </div>
-            `).join('');
-        }
-
-        // Resume button
-        const resumeContainer = document.getElementById('about-resume');
-        if (resumeContainer && data.resume) {
-            resumeContainer.innerHTML = `
-                <a href="${data.resume.href}" download class="btn btn-primary">${data.resume.text}</a>
-            `;
-        }
-    } catch (error) {
-        console.error('Error loading about section:', error);
-    }
+        const d = await getJSON('data/about.json');
+        if (d.sectionTitle) $('about-title').textContent = d.sectionTitle;
+        $('about-text').innerHTML = (d.content || []).map(p => `<p>${p}</p>`).join('');
+        $('about-highlights').innerHTML = (d.highlights || []).map(h =>
+            `<div class="highlight-card"><i class="${h.icon}"></i><h3>${h.title}</h3><p>${h.description}</p></div>`).join('');
+    } catch (e) { console.error(e); }
 }
 
-// ============================================
-// Load Experience Section
-// ============================================
+// ---------- Experience ----------
 async function loadExperience() {
     try {
-        const response = await fetch('data/experience.json');
-        const data = await response.json();
-
-        document.getElementById('experience-title').textContent = data.sectionTitle;
-
-        const gridContainer = document.getElementById('experience-grid');
-        if (gridContainer && data.experiences) {
-            gridContainer.innerHTML = data.experiences.map(exp => {
-                // Support both new "title" and old "role"
-                const title = exp.title || exp.role || '';
-                // Support both new "responsibilities" and old "achievements"
-                const responsibilities = exp.responsibilities || exp.achievements || [];
-
-                return `
-                    <div class="experience-card">
-                        <div class="experience-header">
-                            <h3 class="experience-role">${title}</h3>
-                            <p class="experience-company">${exp.company} ${exp.location ? `• ${exp.location}` : ''}</p>
-                            <p class="experience-period">${exp.period}</p>
-                        </div>
-                        <p class="experience-description">${exp.description}</p>
-                        ${responsibilities.length > 0 ? `
-                            <ul class="experience-achievements">
-                                ${responsibilities.map(item => `<li>${item}</li>`).join('')}
-                            </ul>
-                        ` : ''}
-                    </div>
-                `;
-            }).join('');
-        }
-    } catch (error) {
-        console.error('Error loading experience section:', error);
-    }
+        const d = await getJSON('data/experience.json');
+        if (d.sectionTitle) $('experience-title').textContent = d.sectionTitle;
+        $('experience-list').innerHTML = (d.experiences || []).map(x => `
+            <article class="exp-item reveal">
+                <div class="exp-meta">
+                    <p class="exp-period">${x.period}${x.location ? `<span class="exp-loc">${x.location}</span>` : ''}</p>
+                </div>
+                <div class="exp-body">
+                    <h3 class="exp-role">${x.role}</h3>
+                    <p class="exp-company">${x.company}</p>
+                    <ul class="exp-bullets">${(x.bullets || []).map(b => `<li>${b}</li>`).join('')}</ul>
+                </div>
+            </article>`).join('');
+    } catch (e) { console.error(e); }
 }
 
-// ============================================
-// Load Portfolio Section
-// ============================================
-async function loadPortfolio() {
+// ---------- Projects ----------
+async function loadProjects() {
     try {
-        // Try new filename first, fallback to old filename
-        let response;
-        try {
-            response = await fetch('data/projects.json');
-        } catch {
-            response = await fetch('data/portfolio.json');
-        }
-        const data = await response.json();
-
-        document.getElementById('portfolio-title').textContent = data.sectionTitle;
-        if (document.getElementById('portfolio-subtitle')) {
-            document.getElementById('portfolio-subtitle').textContent = data.subtitle || '';
-        }
-
-        const gridContainer = document.getElementById('portfolio-grid');
-        if (gridContainer && data.projects) {
-            gridContainer.innerHTML = data.projects.map(project => {
-                // Support both "technologies" (new) and "tags" (old)
-                const tech = project.technologies || project.tags || [];
-
-                return `
-                    <div class="portfolio-card">
-                        <div class="portfolio-image" style="background-image: url('${project.image}');">
-                            ${project.icon ? `<div class="portfolio-icon"><i class="${project.icon}"></i></div>` : ''}
-                        </div>
-                        <div class="portfolio-content">
-                            <p class="portfolio-category">${project.category}</p>
-                            <h3 class="portfolio-title">${project.title}</h3>
-                            <p class="portfolio-description">${project.description}</p>
-                            ${tech.length > 0 ? `
-                                <div class="portfolio-tags">
-                                    ${tech.map(tag => `<span class="tag">${tag}</span>`).join('')}
-                                </div>
-                            ` : ''}
-                            ${project.links ? `
-                                <div class="portfolio-links">
-                                    ${project.links.live ? `
-                                        <a href="${project.links.live}" target="_blank" rel="noopener noreferrer" class="portfolio-link">
-                                            <i class="fas fa-external-link-alt"></i> Live Demo
-                                        </a>
-                                    ` : ''}
-                                    ${project.links.github ? `
-                                        <a href="${project.links.github}" target="_blank" rel="noopener noreferrer" class="portfolio-link">
-                                            <i class="fab fa-github"></i> Code
-                                        </a>
-                                    ` : ''}
-                                    ${project.links.case_study ? `
-                                        <a href="${project.links.case_study}" class="portfolio-link">
-                                            <i class="fas fa-book"></i> Case Study
-                                        </a>
-                                    ` : ''}
-                                    ${project.links.prototype ? `
-                                        <a href="${project.links.prototype}" target="_blank" rel="noopener noreferrer" class="portfolio-link">
-                                            <i class="fas fa-desktop"></i> Prototype
-                                        </a>
-                                    ` : ''}
-                                </div>
-                            ` : ''}
-                        </div>
-                    </div>
-                `;
-            }).join('');
-        }
-    } catch (error) {
-        console.error('Error loading portfolio section:', error);
-    }
+        const d = await getJSON('data/projects.json');
+        if (d.sectionTitle) $('projects-title').textContent = d.sectionTitle;
+        $('projects-grid').innerHTML = (d.projects || []).map(p => {
+            const links = p.links || {};
+            const linkHTML = [
+                links.github && `<a href="${links.github}" target="_blank" rel="noopener" class="project-link"><i class="fab fa-github"></i> Code</a>`,
+                links.demo && `<a href="${links.demo}" target="_blank" rel="noopener" class="project-link"><i class="fas fa-arrow-up-right-from-square"></i> Demo</a>`,
+                links.paper && `<a href="${links.paper}" target="_blank" rel="noopener" class="project-link"><i class="fas fa-file-lines"></i> Paper</a>`,
+            ].filter(Boolean).join('');
+            return `
+            <article class="project-card reveal">
+                <div class="project-top">
+                    <i class="project-icon ${p.icon || 'fas fa-cube'}"></i>
+                    <span class="project-date">${p.date || ''}</span>
+                </div>
+                <h3 class="project-title">${p.title}</h3>
+                <p class="project-desc">${p.description}</p>
+                <div class="project-tags">${(p.technologies || []).map(t => `<span class="tag">${t}</span>`).join('')}</div>
+                ${linkHTML ? `<div class="project-links">${linkHTML}</div>` : ''}
+            </article>`;
+        }).join('');
+    } catch (e) { console.error(e); }
 }
 
-// ============================================
-// Load Skills Section
-// ============================================
+// ---------- Skills ----------
 async function loadSkills() {
     try {
-        const response = await fetch('data/skills.json');
-        const data = await response.json();
-
-        document.getElementById('skills-title').textContent = data.sectionTitle;
-        document.getElementById('skills-subtitle').textContent = data.subtitle;
-
-        const categoriesContainer = document.getElementById('skills-categories');
-        if (categoriesContainer && data.categories) {
-            categoriesContainer.innerHTML = data.categories.map(category => `
-                <div class="skill-category">
-                    <div class="skill-category-header">
-                        <i class="${category.icon}"></i>
-                        <h3 class="skill-category-name">${category.name}</h3>
-                    </div>
-                    ${category.skills.map(skill => `
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">${skill.name}</span>
-                                <span class="skill-level-text">${skill.level}%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-bar-fill" style="width: ${skill.level}%"></div>
-                            </div>
-                        </div>
-                    `).join('')}
-                </div>
-            `).join('');
-        }
-    } catch (error) {
-        console.error('Error loading skills section:', error);
-    }
+        const d = await getJSON('data/skills.json');
+        if (d.sectionTitle) $('skills-title').textContent = d.sectionTitle;
+        $('skills-grid').innerHTML = (d.groups || []).map(g => `
+            <div class="skill-group reveal">
+                <div class="skill-group-head"><i class="${g.icon}"></i><h3 class="skill-group-name">${g.name}</h3></div>
+                <div class="skill-pills">${(g.items || []).map(s => `<span class="pill">${s}</span>`).join('')}</div>
+            </div>`).join('');
+    } catch (e) { console.error(e); }
 }
 
-// ============================================
-// Load Education Section (STANDARDIZED)
-// ============================================
+// ---------- Education + Certifications ----------
 async function loadEducation() {
     try {
-        const response = await fetch('data/education.json');
-        const data = await response.json();
-        // Education section - may not be displayed in this template
-        console.log('Education data loaded:', data);
-    } catch (error) {
-        console.error('Error loading education:', error);
-    }
+        const d = await getJSON('data/education.json');
+        if (d.sectionTitle) $('education-title').textContent = d.sectionTitle;
+        $('education-list').innerHTML = (d.education || []).map(e => `
+            <article class="edu-item reveal">
+                <div class="edu-main">
+                    <h3 class="edu-degree">${e.degree}</h3>
+                    <p class="edu-school">${e.school}</p>
+                    ${e.coursework ? `<p class="edu-course"><span>Relevant Coursework</span>${e.coursework}</p>` : ''}
+                </div>
+                <div class="edu-side">
+                    ${e.gpa ? `<div class="edu-gpa">${e.gpa}</div>` : ''}
+                    <div class="edu-period">${e.period || ''}</div>
+                    ${e.location ? `<span class="edu-loc">${e.location}</span>` : ''}
+                </div>
+            </article>`).join('');
+
+        if (d.certsTitle) $('certs-title').textContent = d.certsTitle;
+        $('certs-grid').innerHTML = (d.certifications || []).map(c => `
+            <div class="cert-item reveal"><p class="cert-name">${c.name}</p><p class="cert-issuer">${c.issuer}</p></div>`).join('');
+    } catch (e) { console.error(e); }
 }
 
-// ============================================
-// Load Contact Section
-// ============================================
+// ---------- Publications ----------
+async function loadPublications() {
+    try {
+        const d = await getJSON('data/publications.json');
+        if (d.sectionTitle) $('publications-title').textContent = d.sectionTitle;
+        $('publications-list').innerHTML = (d.publications || []).map(p => `
+            <li class="pub-item reveal">
+                <div class="pub-body">
+                    <h3 class="pub-title">${p.title}</h3>
+                    <p class="pub-venue">${p.venue}</p>
+                    <p class="pub-desc">${p.description}</p>
+                    ${p.link ? `<a href="${p.link}" target="_blank" rel="noopener" class="pub-link"><i class="fas fa-arrow-up-right-from-square"></i> View publication</a>` : ''}
+                </div>
+                <span class="pub-year">${p.year}</span>
+            </li>`).join('');
+    } catch (e) { console.error(e); }
+}
+
+// ---------- Contact ----------
 async function loadContact() {
     try {
-        const response = await fetch('data/contact.json');
-        const data = await response.json();
-
-        document.getElementById('contact-title').textContent = data.sectionTitle;
-        document.getElementById('contact-subtitle').textContent = data.subtitle;
-
-        // Contact info
-        const contactInfoContainer = document.getElementById('contact-info');
-        if (contactInfoContainer && data.contactInfo) {
-            contactInfoContainer.innerHTML = data.contactInfo.map(info => `
-                <div class="contact-info-item">
-                    <i class="${info.icon}"></i>
-                    <div class="contact-info-content">
-                        <h4>${info.label}</h4>
-                        <p>${info.value}</p>
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        // Contact form
-        const contactForm = document.getElementById('contact-form');
-        if (contactForm && data.form) {
-            contactForm.action = data.form.action;
-            contactForm.method = data.form.method;
-
-            contactForm.innerHTML = data.form.fields.map(field => `
-                <div class="form-group">
-                    <label for="${field.name}">${field.label}</label>
-                    ${field.type === 'textarea' ? `
-                        <textarea
-                            id="${field.name}"
-                            name="${field.name}"
-                            placeholder="${field.placeholder}"
-                            ${field.required ? 'required' : ''}
-                            rows="${field.rows || 5}"
-                        ></textarea>
-                    ` : `
-                        <input
-                            type="${field.type}"
-                            id="${field.name}"
-                            name="${field.name}"
-                            placeholder="${field.placeholder}"
-                            ${field.required ? 'required' : ''}
-                        />
-                    `}
-                </div>
-            `).join('') + `
-                <button type="submit" class="form-submit">${data.form.submitText}</button>
-                <div class="form-message"></div>
-            `;
-
-            // Handle form submission
-            contactForm.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                const formMessage = contactForm.querySelector('.form-message');
-                const submitButton = contactForm.querySelector('.form-submit');
-
-                try {
-                    submitButton.disabled = true;
-                    submitButton.textContent = 'Sending...';
-
-                    const formData = new FormData(contactForm);
-                    const response = await fetch(contactForm.action, {
-                        method: contactForm.method,
-                        body: formData,
-                        headers: {
-                            'Accept': 'application/json'
-                        }
-                    });
-
-                    if (response.ok) {
-                        formMessage.textContent = data.form.successMessage;
-                        formMessage.className = 'form-message success';
-                        formMessage.style.display = 'block';
-                        contactForm.reset();
-                    } else {
-                        throw new Error('Form submission failed');
-                    }
-                } catch (error) {
-                    formMessage.textContent = data.form.errorMessage;
-                    formMessage.className = 'form-message error';
-                    formMessage.style.display = 'block';
-                } finally {
-                    submitButton.disabled = false;
-                    submitButton.textContent = data.form.submitText;
-                }
-            });
-        }
-
-        // Social media
-        const socialContainer = document.getElementById('contact-social');
-        if (socialContainer && data.socialMedia) {
-            socialContainer.innerHTML = data.socialMedia.map(social => `
-                <a href="${social.url}" target="_blank" rel="noopener noreferrer" class="contact-social-item">
-                    <i class="${social.icon}"></i>
-                    <span>${social.username}</span>
-                </a>
-            `).join('');
-        }
-    } catch (error) {
-        console.error('Error loading contact section:', error);
-    }
+        const d = await getJSON('data/contact.json');
+        if (d.sectionTitle) $('contact-title').textContent = d.sectionTitle;
+        $('contact-lede').textContent = d.lede || '';
+        const mail = $('contact-mail');
+        mail.textContent = d.email || '';
+        mail.href = `mailto:${d.email}`;
+        $('contact-links').innerHTML = (d.links || []).map(l =>
+            `<a href="${l.url}"${l.external !== false ? ' target="_blank" rel="noopener"' : ''} class="contact-link"><i class="${l.icon}"></i>${l.label}</a>`).join('');
+    } catch (e) { console.error(e); }
 }
 
-// ============================================
-// Load Footer
-// ============================================
+// ---------- Footer ----------
 async function loadFooter() {
     try {
-        const response = await fetch('data/footer.json');
-        const data = await response.json();
-
-        document.getElementById('footer-text').textContent = data.text;
-        document.getElementById('footer-copyright').textContent = data.copyright;
-
-        // Footer social links
-        const footerSocial = document.getElementById('footer-social');
-        if (footerSocial && data.socialLinks) {
-            footerSocial.innerHTML = data.socialLinks.map(link => `
-                <a href="${link.url}" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="${link.platform}">
-                    <i class="${link.icon}"></i>
-                </a>
-            `).join('');
-        }
-
-        // Footer links
-        const footerLinks = document.getElementById('footer-links');
-        if (footerLinks && data.links) {
-            footerLinks.innerHTML = data.links.map(link => `
-                <a href="${link.href}">${link.text}</a>
-            `).join('');
-        }
-    } catch (error) {
-        console.error('Error loading footer:', error);
-    }
+        const d = await getJSON('data/footer.json');
+        $('footer-text').textContent = d.text || '';
+        $('footer-copyright').textContent = d.copyright || '';
+        $('footer-social').innerHTML = (d.social || []).map(s =>
+            `<a href="${s.url}" target="_blank" rel="noopener" class="social-link" aria-label="${s.platform}"><i class="${s.icon}"></i></a>`).join('');
+    } catch (e) { console.error(e); }
 }
 
-// ============================================
-// Initialize Navigation
-// ============================================
-function initializeNavigation() {
-    const navToggle = document.getElementById('nav-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    const navLinks = document.querySelectorAll('.nav-link');
+// ============================================================
+//  Interactions
+// ============================================================
+function initNavigation() {
+    const toggle = $('nav-toggle');
+    const menu = $('nav-menu');
+    toggle?.addEventListener('click', () => { menu.classList.toggle('active'); toggle.classList.toggle('active'); });
 
-    // Mobile menu toggle
-    if (navToggle) {
-        navToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-    }
-
-    // Close menu when clicking on a link
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-        });
-    });
-
-    // Smooth scroll to sections
-    navLinks.forEach(link => {
+    document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = link.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-
-            if (targetSection) {
-                const offsetTop = targetSection.offsetTop - 80;
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
+            const target = document.querySelector(link.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                window.scrollTo({ top: target.offsetTop - 70, behavior: 'smooth' });
             }
+            menu.classList.remove('active');
+            toggle.classList.remove('active');
         });
     });
 }
 
-// ============================================
-// Initialize Scroll Effects
-// ============================================
-function initializeScrollEffects() {
-    const navbar = document.getElementById('navbar');
-    const navLinks = document.querySelectorAll('.nav-link');
+function initScrollEffects() {
+    const navbar = $('navbar');
+    const links = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section[id], header[id]');
 
-    window.addEventListener('scroll', () => {
-        // Navbar scroll effect
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-
-        // Active link highlighting
-        const sections = document.querySelectorAll('section[id]');
-        let currentSection = '';
-
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
-            const sectionHeight = section.offsetHeight;
-
-            if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-                currentSection = section.getAttribute('id');
-            }
+    const onScroll = () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 50);
+        let current = '';
+        sections.forEach(s => {
+            if (window.scrollY >= s.offsetTop - 120) current = s.id;
         });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${currentSection}`) {
-                link.classList.add('active');
-            }
-        });
-    });
-}
-
-// ============================================
-// Initialize Back to Top Button
-// ============================================
-function initializeBackToTop() {
-    const backToTopButton = document.getElementById('back-to-top');
-
-    if (backToTopButton) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopButton.classList.add('visible');
-            } else {
-                backToTopButton.classList.remove('visible');
-            }
-        });
-
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    }
-}
-
-// ============================================
-// Initialize Animations
-// ============================================
-function initializeAnimations() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px'
+        links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === `#${current}`));
     };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+}
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+function initBackToTop() {
+    const btn = $('back-to-top');
+    window.addEventListener('scroll', () => btn.classList.toggle('visible', window.scrollY > 360), { passive: true });
+    btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+}
+
+function initReveal() {
+    const els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) { els.forEach(el => el.classList.add('in')); return; }
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
             if (entry.isIntersecting) {
-                entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
-                observer.unobserve(entry.target);
+                entry.target.style.transitionDelay = `${Math.min(i * 60, 240)}ms`;
+                entry.target.classList.add('in');
+                io.unobserve(entry.target);
             }
         });
-    }, observerOptions);
-
-    // Observe elements for animation
-    const animateElements = document.querySelectorAll('.section, .experience-card, .portfolio-card, .skill-category');
-    animateElements.forEach(el => {
-        el.style.opacity = '0';
-        observer.observe(el);
-    });
+    }, { threshold: 0.12, rootMargin: '0px 0px -80px 0px' });
+    els.forEach(el => io.observe(el));
 }

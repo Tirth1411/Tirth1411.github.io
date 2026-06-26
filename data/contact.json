@@ -1,84 +1,23 @@
 {
-  "_instructions": "Contact section.",
-  "sectionTitle": "Let's Work Together",
-  "subtitle": "Have a project in mind? Let's create something amazing together!",
-  "contactInfo": [
+  "sectionTitle": "Get in touch",
+  "lede": "I'm open to data science, machine learning and GenAI roles for 2026 — and always happy to talk about applied AI, research or an interesting problem.",
+  "email": "tirthlaheri@gmail.com",
+  "links": [
     {
-      "type": "email",
-      "label": "Email",
-      "value": "tirthlaheri@gmail.com",
-      "href": "mailto:tirthlaheri@gmail.com",
-      "icon": "fas fa-envelope"
+      "label": "LinkedIn",
+      "url": "https://linkedin.com/in/tirthlaheri",
+      "icon": "fab fa-linkedin"
     },
     {
-      "type": "location",
-      "label": "Location",
-      "value": "Murfreesboro, TN",
-      "icon": "fas fa-map-marker-alt"
+      "label": "GitHub",
+      "url": "https://github.com/Tirth1411",
+      "icon": "fab fa-github"
     },
     {
-      "type": "availability",
-      "label": "Availability",
-      "value": "Open to opportunities",
-      "icon": "fas fa-clock"
+      "label": "+1 (615) 497-1076",
+      "url": "tel:+16154971076",
+      "icon": "fas fa-phone",
+      "external": false
     }
-  ],
-  "socialMedia": [
-    {
-      "platform": "LinkedIn",
-      "url": "linkedin.com/in/tirthlaheri",
-      "icon": "fab fa-linkedin-in",
-      "username": "@tirthlaheri"
-    },
-    {
-      "platform": "GitHub",
-      "url": "github.com/Tirth1411",
-      "icon": "fab fa-github",
-      "username": "@Tirth1411"
-    },
-    {
-      "platform": "Email",
-      "url": "mailto:tirthlaheri@gmail.com",
-      "icon": "fas fa-envelope",
-      "username": "tirthlaheri@gmail.com"
-    }
-  ],
-  "form": {
-    "action": "#",
-    "method": "POST",
-    "fields": [
-      {
-        "name": "name",
-        "type": "text",
-        "label": "Your Name",
-        "placeholder": "John Doe",
-        "required": true
-      },
-      {
-        "name": "email",
-        "type": "email",
-        "label": "Your Email",
-        "placeholder": "john@example.com",
-        "required": true
-      },
-      {
-        "name": "subject",
-        "type": "text",
-        "label": "Subject",
-        "placeholder": "Project Inquiry",
-        "required": true
-      },
-      {
-        "name": "message",
-        "type": "textarea",
-        "label": "Message",
-        "placeholder": "Tell me about your project...",
-        "required": true,
-        "rows": 6
-      }
-    ],
-    "submitText": "Send Message",
-    "successMessage": "Thank you! I'll get back to you soon.",
-    "errorMessage": "Oops! Something went wrong."
-  }
+  ]
 }

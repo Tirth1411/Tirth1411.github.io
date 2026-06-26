@@ -1,0 +1,23 @@
+{
+  "sectionTitle": "Publications",
+  "publications": [
+    {
+      "title": "Visible Light Communication Based Indoor Positioning System",
+      "venue": "IEEE Xplore Digital Library",
+      "year": "2024",
+      "description": "A VLC-based indoor localization system using photodiode sensors and ML-driven calibration."
+    },
+    {
+      "title": "IoT-Based Remote Health Monitoring for Rural Clinics",
+      "venue": "Research Repository · Parul University",
+      "year": "2023",
+      "description": "An IoT patient-monitoring system with MQTT data transmission and rule-based anomaly detection."
+    },
+    {
+      "title": "Smart Wearables and Cloud Computing for Preventive Healthcare",
+      "venue": "Academic Repository · Parul University",
+      "year": "2022",
+      "description": "A wearable-cloud architecture with AI-driven alerts for chronic-disease risk detection."
+    }
+  ]
+}

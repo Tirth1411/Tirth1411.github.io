@@ -1,230 +1,91 @@
 {
-  "_instructions": "Organize your skills with proficiency levels (0-100).",
-  "sectionTitle": "Skills & Expertise",
-  "subtitle": "Technologies and tools I work with",
-  "categories": [
+  "sectionTitle": "Technical Skills",
+  "groups": [
     {
-      "name": "Programming Languages",
+      "name": "Languages",
       "icon": "fas fa-code",
-      "skills": [
-        {
-          "name": "Python",
-          "level": 83
-        },
-        {
-          "name": "Java",
-          "level": 80
-        },
-        {
-          "name": "C/C++",
-          "level": 80
-        },
-        {
-          "name": "SQL",
-          "level": 83
-        },
-        {
-          "name": "R",
-          "level": 95
-        },
-        {
-          "name": "JavaScript",
-          "level": 80
-        },
-        {
-          "name": "HTML/CSS",
-          "level": 80
-        }
+      "items": [
+        "Python",
+        "Java",
+        "C/C++",
+        "SQL",
+        "R",
+        "JavaScript",
+        "HTML/CSS"
       ]
     },
     {
-      "name": "Frameworks & Libraries",
-      "icon": "fas fa-toolbox",
-      "skills": [
-        {
-          "name": "TensorFlow",
-          "level": 89
-        },
-        {
-          "name": "PyTorch",
-          "level": 83
-        },
-        {
-          "name": "Keras",
-          "level": 80
-        },
-        {
-          "name": "Scikit-Learn",
-          "level": 83
-        },
-        {
-          "name": "HuggingFace",
-          "level": 85
-        },
-        {
-          "name": "LangChain",
-          "level": 88
-        },
-        {
-          "name": "LlamaIndex",
-          "level": 80
-        },
-        {
-          "name": "OpenCV",
-          "level": 82
-        },
-        {
-          "name": "FastAPI",
-          "level": 82
-        },
-        {
-          "name": "Pandas",
-          "level": 86
-        },
-        {
-          "name": "NumPy",
-          "level": 86
-        },
-        {
-          "name": "Matplotlib",
-          "level": 83
-        },
-        {
-          "name": "Seaborn",
-          "level": 83
-        },
-        {
-          "name": "FAISS",
-          "level": 82
-        }
+      "name": "AI / ML Concepts",
+      "icon": "fas fa-brain",
+      "items": [
+        "Machine Learning",
+        "Deep Learning",
+        "Generative AI",
+        "LLMs",
+        "RAG",
+        "Prompt Engineering",
+        "Computer Vision",
+        "NLP",
+        "Neural Networks",
+        "Transfer Learning",
+        "Model Optimization",
+        "Statistics",
+        "Data Analysis"
       ]
     },
     {
-      "name": "Tools & Platforms",
-      "icon": "fas fa-wrench",
-      "skills": [
-        {
-          "name": "Git",
-          "level": 83
-        },
-        {
-          "name": "Docker",
-          "level": 83
-        },
-        {
-          "name": "Kubernetes",
-          "level": 80
-        },
-        {
-          "name": "VS Code",
-          "level": 80
-        },
-        {
-          "name": "Jupyter Notebook",
-          "level": 80
-        },
-        {
-          "name": "Google Colaboratory",
-          "level": 80
-        },
-        {
-          "name": "MLflow",
-          "level": 83
-        },
-        {
-          "name": "Power BI",
-          "level": 83
-        },
-        {
-          "name": "Tableau",
-          "level": 83
-        },
-        {
-          "name": "Streamlit",
-          "level": 82
-        },
-        {
-          "name": "AWS",
-          "level": 83
-        },
-        {
-          "name": "MySQL",
-          "level": 80
-        },
-        {
-          "name": "PostgreSQL",
-          "level": 80
-        }
+      "name": "Frameworks & Tools",
+      "icon": "fas fa-layer-group",
+      "items": [
+        "TensorFlow",
+        "PyTorch",
+        "Keras",
+        "Scikit-Learn",
+        "HuggingFace",
+        "LangChain",
+        "LlamaIndex",
+        "OpenCV",
+        "FastAPI"
       ]
     },
     {
-      "name": "Technical Skills",
-      "icon": "fas fa-laptop-code",
-      "skills": [
-        {
-          "name": "Machine Learning",
-          "level": 80
-        },
-        {
-          "name": "Deep Learning",
-          "level": 84
-        },
-        {
-          "name": "Generative AI",
-          "level": 80
-        },
-        {
-          "name": "LLMs",
-          "level": 83
-        },
-        {
-          "name": "RAG",
-          "level": 85
-        },
-        {
-          "name": "Prompt Engineering",
-          "level": 80
-        },
-        {
-          "name": "Computer Vision",
-          "level": 80
-        },
-        {
-          "name": "NLP",
-          "level": 80
-        },
-        {
-          "name": "Neural Networks",
-          "level": 83
-        },
-        {
-          "name": "Transfer Learning",
-          "level": 82
-        },
-        {
-          "name": "Model Optimization",
-          "level": 80
-        },
-        {
-          "name": "Statistics",
-          "level": 80
-        },
-        {
-          "name": "Data Analysis",
-          "level": 83
-        },
-        {
-          "name": "Cloud Computing",
-          "level": 80
-        },
-        {
-          "name": "Vector Databases",
-          "level": 83
-        },
-        {
-          "name": "ETL Pipelines",
-          "level": 80
-        }
+      "name": "Developer Tools",
+      "icon": "fas fa-screwdriver-wrench",
+      "items": [
+        "Git",
+        "Docker",
+        "Kubernetes",
+        "VS Code",
+        "Jupyter",
+        "Google Colab",
+        "MLflow",
+        "Power BI",
+        "Tableau",
+        "Streamlit"
+      ]
+    },
+    {
+      "name": "Libraries",
+      "icon": "fas fa-cubes",
+      "items": [
+        "Pandas",
+        "NumPy",
+        "Matplotlib",
+        "Seaborn",
+        "OpenCV",
+        "FAISS"
+      ]
+    },
+    {
+      "name": "Cloud & Databases",
+      "icon": "fas fa-cloud",
+      "items": [
+        "AWS",
+        "Cloud Computing",
+        "MySQL",
+        "PostgreSQL",
+        "Vector Databases",
+        "ETL Pipelines"
       ]
     }
   ]

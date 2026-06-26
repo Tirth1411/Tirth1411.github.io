@@ -1,14 +1,10 @@
 {
-  "_instructions": "Navigation menu configuration. Add/remove/reorder menu items as needed.",
   "brand": {
     "name": "Tirth Laheri",
-    "href": "#home"
+    "href": "#hero",
+    "mark": "TL"
   },
   "menuItems": [
-    {
-      "text": "Home",
-      "href": "#home"
-    },
     {
       "text": "About",
       "href": "#about"
@@ -18,16 +14,20 @@
       "href": "#experience"
     },
     {
-      "text": "Skills",
-      "href": "#skills"
-    },
-    {
       "text": "Projects",
       "href": "#projects"
     },
     {
+      "text": "Skills",
+      "href": "#skills"
+    },
+    {
       "text": "Education",
       "href": "#education"
+    },
+    {
+      "text": "Publications",
+      "href": "#publications"
     },
     {
       "text": "Contact",
