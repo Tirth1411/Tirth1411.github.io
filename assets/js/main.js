@@ -32,7 +32,7 @@ async function init() {
     }
 }
 
-const ASSET_VERSION = '7';
+const ASSET_VERSION = '8';
 const $ = (id) => document.getElementById(id);
 const NAV_OFFSET = 64;
 function scrollToEl(el, smooth) {
@@ -151,7 +151,7 @@ async function loadProjects() {
                 <div class="project-media">
                     <img src="${p.image}" alt="${p.title}" loading="lazy" decoding="async">
                     <span class="project-chip"><i class="${p.icon || 'fas fa-cube'}"></i></span>
-                    <span class="project-date">${p.date || ''}</span>
+                    ${p.date ? `<span class="project-date">${p.date}</span>` : ''}
                 </div>` : ''}
                 <div class="project-content">
                     ${p.image ? '' : `<div class="project-top"><i class="project-icon ${p.icon || 'fas fa-cube'}"></i><span class="project-date">${p.date || ''}</span></div>`}

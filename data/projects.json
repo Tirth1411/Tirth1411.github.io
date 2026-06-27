@@ -1,109 +1,145 @@
 {
   "sectionTitle": "Selected Projects",
+  "subtitle": "",
   "projects": [
     {
-      "title": "Multilingual Legal Document Intelligence System",
-      "date": "Jan 2026 — Present",
-      "icon": "fas fa-scale-balanced",
-      "description": "A RAG pipeline (FAISS + LangChain) for multilingual legal-document search and Q&A, using PaddleOCR for layout-aware extraction and FastAPI for scalable inference endpoints.",
+      "title": "Multi-Agent RAG System",
+      "icon": "fas fa-diagram-project",
+      "description": "A multi-agent Retrieval-Augmented Generation app built with Streamlit and LangChain — multiple agents collaborate to retrieve and answer questions over your documents.",
       "technologies": [
-        "GenAI",
-        "RAG",
+        "Python",
         "LangChain",
-        "FAISS",
-        "PaddleOCR",
-        "FastAPI",
+        "Streamlit",
+        "Multi-Agent",
+        "RAG",
         "LLM"
       ],
-      "links": {},
-      "image": "assets/images/projects/legal-doc.png"
+      "image": "assets/images/projects/multi-agentic-rag.png",
+      "links": {
+        "github": "https://github.com/Tirth1411/multi-agentic-rag"
+      },
+      "date": ""
     },
     {
-      "title": "GravWaveFormer — GW Detection Ensemble",
-      "date": "Sep 2025 — Dec 2025",
-      "icon": "fas fa-wave-square",
-      "description": "A CNN-Transformer + GraphSAGE ensemble for gravitational-wave detection — 0.934 ROC-AUC at under 2 ms inference latency — with GradCAM explainability, ablation studies and an interactive Streamlit dashboard.",
+      "title": "RAG Chatbot",
+      "icon": "fas fa-comments",
+      "description": "A Retrieval-Augmented Generation chatbot in Python that answers questions grounded strictly in your own documents.",
       "technologies": [
-        "PyTorch",
-        "CNN-Transformer",
-        "GraphSAGE",
-        "GradCAM",
-        "Streamlit"
+        "Python",
+        "RAG",
+        "LangChain",
+        "LLM",
+        "Generative AI"
       ],
-      "links": {},
-      "image": "assets/images/projects/gravwaveformer.png"
+      "image": "assets/images/projects/rag-chatbot.png",
+      "links": {
+        "github": "https://github.com/Tirth1411/rag-chatbot"
+      },
+      "date": ""
     },
     {
-      "title": "Cross-Camera Player Mapping",
-      "date": "Jul 2025",
-      "icon": "fas fa-video",
-      "description": "A computer-vision tracking pipeline (YOLOv11 + Deep SORT with ResNet-based Re-ID) reaching 95% cross-camera ID consistency for player mapping.",
+      "title": "LangChain RAG for Document Understanding",
+      "icon": "fas fa-file-lines",
+      "description": "Two RAG pipelines — one on OpenAI, one fully open-source with Hugging Face — that answer questions over a PDF using LangChain and FAISS.",
       "technologies": [
-        "YOLOv11",
-        "Deep SORT",
-        "ResNet",
-        "Re-ID",
-        "Computer Vision"
+        "LangChain",
+        "FAISS",
+        "OpenAI",
+        "Hugging Face",
+        "RAG",
+        "NLP"
       ],
-      "links": {},
-      "image": "assets/images/projects/cross-camera.png"
+      "image": "assets/images/projects/legal-doc.png",
+      "links": {
+        "github": "https://github.com/Tirth1411/langchain-rag-retrieval-augmented-generation-for-document-understanding"
+      },
+      "date": ""
     },
     {
-      "title": "Plant Disease Detection",
-      "date": "Dec 2024",
-      "icon": "fas fa-leaf",
-      "description": "A CNN classifier with transfer learning that identifies plant diseases from leaf images.",
+      "title": "Credit-Card Fraud Detection (MLOps)",
+      "icon": "fas fa-shield-halved",
+      "description": "An end-to-end MLOps pipeline for credit-card fraud detection — model training, experiment tracking and deployment on highly imbalanced data.",
       "technologies": [
-        "TensorFlow",
-        "OpenCV",
-        "CNN",
-        "Transfer Learning"
+        "Python",
+        "MLOps",
+        "scikit-learn",
+        "Classification",
+        "Imbalanced Data"
       ],
-      "links": {},
-      "image": "assets/images/projects/plant-disease.png"
+      "image": "assets/images/projects/fraud-mlops.png",
+      "links": {
+        "github": "https://github.com/Tirth1411/creditcardfrauddetection-mlops"
+      },
+      "date": ""
+    },
+    {
+      "title": "End-to-End MLOps Pipeline",
+      "icon": "fas fa-infinity",
+      "description": "A full-stack MLOps workflow with Infrastructure-as-Code on GCP — Terraform, BigQuery, dbt, Prefect, MLflow, FastAPI and CI/CD.",
+      "technologies": [
+        "Terraform",
+        "GCP",
+        "MLflow",
+        "FastAPI",
+        "Docker",
+        "dbt"
+      ],
+      "image": "assets/images/projects/mlops-app.png",
+      "links": {
+        "github": "https://github.com/Tirth1411/mlops-app"
+      },
+      "date": ""
     },
     {
       "title": "Diabetic Retinopathy Screening",
-      "date": "Feb 2024",
       "icon": "fas fa-eye",
-      "description": "A deep-learning model for diabetic-retinopathy detection, reaching 94.7% accuracy on retinal images.",
+      "description": "A deep-learning model that grades diabetic-retinopathy severity from retinal fundus images, reaching ~94.7% accuracy (Keras/TensorFlow).",
       "technologies": [
         "TensorFlow",
-        "Deep Learning",
+        "Keras",
         "CNN",
+        "Deep Learning",
         "Medical Imaging"
       ],
+      "image": "assets/images/projects/diabetic-retinopathy.png",
       "links": {
         "github": "https://github.com/Tirth1411/Diabetic-Retinopathy-Screening"
       },
-      "image": "assets/images/projects/diabetic-retinopathy.png"
+      "date": ""
     },
     {
-      "title": "Emotion Detection",
-      "date": "Dec 2023",
+      "title": "NLP Text Analysis App",
+      "icon": "fas fa-comment-dots",
+      "description": "An interactive Streamlit app for NLP text analysis — sentiment, keywords and text statistics, right in the browser.",
+      "technologies": [
+        "Python",
+        "NLP",
+        "Streamlit",
+        "Sentiment Analysis",
+        "Text Analysis"
+      ],
+      "image": "assets/images/projects/text-nlp.png",
+      "links": {
+        "github": "https://github.com/Tirth1411/text-analysis-using-nlp-streamlit"
+      },
+      "date": ""
+    },
+    {
+      "title": "Gender & Age Prediction",
       "icon": "fas fa-face-smile",
-      "description": "A CNN-based facial-emotion classifier for real-time emotion recognition.",
+      "description": "Real-time gender and age estimation from face images using OpenCV deep-learning models.",
       "technologies": [
-        "TensorFlow",
-        "CNN",
-        "Facial Recognition"
+        "Python",
+        "OpenCV",
+        "Computer Vision",
+        "Deep Learning",
+        "Face Detection"
       ],
-      "links": {},
-      "image": "assets/images/projects/emotion-detection.png"
-    },
-    {
-      "title": "Speech-To-Speech Multilingual Translation",
-      "date": "Mar 2023",
-      "icon": "fas fa-language",
-      "description": "A real-time speech-translation app with voice cloning for Indian languages, built on HuggingFace models and the Google API.",
-      "technologies": [
-        "HuggingFace",
-        "Google API",
-        "Voice Cloning",
-        "NLP"
-      ],
-      "links": {},
-      "image": "assets/images/projects/speech-translation.png"
+      "image": "assets/images/projects/emotion-detection.png",
+      "links": {
+        "github": "https://github.com/Tirth1411/Gender-Age-Prediction-"
+      },
+      "date": ""
     }
   ]
 }
