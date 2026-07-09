@@ -10,7 +10,7 @@
     },
     {
       "icon": "fas fa-circle",
-      "text": "Open to 2026 roles"
+      "text": "Available Dec 2026"
     }
   ],
   "eyebrow": "Data Scientist · ML / GenAI Engineer",
@@ -22,7 +22,7 @@
     "Generative AI &amp; RAG",
     "Deep Learning"
   ],
-  "summary": "I build practical AI systems end-to-end — from retrieval-augmented LLM pipelines and deep-learning models to production deployment with modern MLOps tooling.",
+  "summary": "I'm a grad student building RAG pipelines and deep learning models, and I like taking them all the way to production instead of stopping at a notebook.",
   "cta": [
     {
       "text": "Email me",
