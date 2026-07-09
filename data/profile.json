@@ -1,8 +1,8 @@
 {
   "profile": {
     "name": "Tirth Laheri",
-    "title": "Professional Developer",
-    "bio": "Professional portfolio"
+    "title": "Data Scientist · ML / GenAI Engineer",
+    "bio": "Data Science master's candidate at MTSU (4.00 GPA) building RAG pipelines, deep learning systems, and production ML. Published researcher (IEEE Xplore). Available December 2026."
   },
   "contact": {
     "email": "tirthlaheri.194@gmail.com",
@@ -11,8 +11,8 @@
     "linkedin": "linkedin.com/in/tirthlaheri"
   },
   "siteConfig": {
-    "domain": "",
-    "title": "Tirth Laheri - Portfolio",
-    "description": "Professional portfolio"
+    "domain": "tirthlaheri.com",
+    "title": "Tirth Laheri | Data Scientist & ML / GenAI Engineer",
+    "description": "Tirth Laheri, Data Scientist and ML / GenAI Engineer. MS Data Science at MTSU (4.00 GPA). Building RAG pipelines, deep learning systems, and production ML. Available December 2026."
   }
 }
