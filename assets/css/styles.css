@@ -225,7 +225,7 @@ img { max-width: 100%; display: block; }
 @keyframes scrollDot { 0% { opacity: 0; transform: translateY(0); } 40% { opacity: 1; } 100% { opacity: 0; transform: translateY(14px); } }
 
 /* ---------- Sections ---------- */
-.section { padding: 110px 0; border-top: 1px solid var(--line); }
+.section { padding: 110px 0; border-top: 1px solid var(--line); position: relative; }
 .section-head { display: flex; align-items: baseline; gap: 18px; margin-bottom: 56px; }
 .section-index { font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent); letter-spacing: 0.1em; padding-top: 6px; }
 
