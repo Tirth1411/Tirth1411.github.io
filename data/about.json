@@ -1,9 +1,9 @@
 {
   "sectionTitle": "About",
   "content": [
-    "I'm a Data Science master's candidate at Middle Tennessee State University, currently sitting at a 4.00 GPA. My work covers the full lifecycle of an AI system, from cleaning and engineering the data to training and fine-tuning models to actually getting them into production.",
-    "Right now I'm mostly focused on Generative AI, things like RAG pipelines, LLM fine-tuning, and deep learning models for computer vision and signal detection. I've worked on this through internships at NeuralForge AI and SlashMark, plus my current graduate assistantship at MTSU.",
-    "I also published a paper at ICSADL 2024 on a visible light based indoor positioning system, alongside two other academic projects on IoT health monitoring."
+    "I'm a <strong>Data Science master's candidate at Middle Tennessee State University</strong>, currently at a 4.00 GPA. My work spans the full AI lifecycle: data engineering, model training and fine-tuning, and production deployment.",
+    "I'm currently focused on <strong>Generative AI</strong>, specifically RAG pipelines, LLM fine-tuning, and deep learning models for computer vision and signal detection. I've applied this through internships at <strong>NeuralForge AI</strong> and <strong>SlashMark</strong>, and my current graduate assistantship at MTSU.",
+    "I also published a paper at ICSADL 2024 on a <strong>visible light based indoor positioning system</strong>, along with two academic projects on IoT health monitoring."
   ],
   "highlights": [
     {
