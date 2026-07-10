@@ -3,9 +3,10 @@
   "publications": [
     {
       "title": "Visible Light Communication Based Indoor Positioning System",
-      "venue": "IEEE Xplore Digital Library",
+      "venue": "2024 3rd International Conference on Sentiment Analysis and Deep Learning (ICSADL)",
       "year": "2024",
-      "description": "A VLC-based indoor localization system using photodiode sensors and ML-driven calibration."
+      "description": "A VLC-based indoor localization system using LDR sensors, Arduino, and NodeMCU, with a Li-Fi transmitter-receiver setup for room-level positioning.",
+      "doi": "10.1109/ICSADL61749.2024.00119"
     },
     {
       "title": "IoT-Based Remote Health Monitoring for Rural Clinics",
