@@ -1,30 +1,30 @@
 {
   "sectionTitle": "About",
   "content": [
-    "I'm a <strong>Data Science master's candidate at Middle Tennessee State University</strong> (4.00 GPA) who builds AI systems across the full lifecycle — data engineering, model training and fine-tuning, and production deployment.",
-    "My focus is <strong>Generative AI and applied machine learning</strong>: retrieval-augmented generation (RAG) pipelines, LLM fine-tuning, and deep-learning models for computer vision and scientific signal detection. I've shipped this work through internships at <strong>NeuralForge AI</strong> and <strong>SlashMark</strong> and a graduate assistantship at MTSU.",
-    "I'm also a <strong>published researcher</strong> (IEEE Xplore), with work spanning visible-light indoor positioning and IoT-based health monitoring."
+    "I'm a Data Science master's candidate at Middle Tennessee State University, currently sitting at a 4.00 GPA. My work covers the full lifecycle of an AI system, from cleaning and engineering the data to training and fine-tuning models to actually getting them into production.",
+    "Right now I'm mostly focused on Generative AI, things like RAG pipelines, LLM fine-tuning, and deep learning models for computer vision and signal detection. I've worked on this through internships at NeuralForge AI and SlashMark, plus my current graduate assistantship at MTSU.",
+    "I also published a paper at ICSADL 2024 on a visible light based indoor positioning system, alongside two other academic projects on IoT health monitoring."
   ],
   "highlights": [
     {
       "icon": "fas fa-robot",
       "title": "Generative AI & RAG",
-      "description": "LangChain, vector databases and LLM fine-tuning for document intelligence and internal Q&A."
+      "description": "LangChain, vector databases, and LLM fine-tuning for document intelligence and internal Q&A."
     },
     {
       "icon": "fas fa-brain",
       "title": "Deep Learning & CV",
-      "description": "CNN and Transformer models for medical imaging, gravitational-wave detection and multi-camera tracking."
+      "description": "CNN and Transformer models for medical imaging, gravitational wave detection, and multi-camera tracking."
     },
     {
       "icon": "fas fa-server",
       "title": "MLOps & Data Engineering",
-      "description": "AWS, Docker, MLflow and REST APIs; pipelines and BI dashboards in Power BI and Tableau."
+      "description": "AWS, Docker, MLflow, and REST APIs, with pipelines and BI dashboards in Power BI and Tableau."
     },
     {
       "icon": "fas fa-microscope",
       "title": "Published Researcher",
-      "description": "IEEE Xplore — visible-light positioning and IoT health-monitoring systems."
+      "description": "1 IEEE paper on visible light indoor positioning, plus 2 academic projects on IoT health monitoring."
     }
   ]
 }
